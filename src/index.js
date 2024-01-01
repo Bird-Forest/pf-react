@@ -9,7 +9,7 @@ import './firebase';
 import '@csstools/normalize.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <BrowserRouter basename="/react-examles">
+  <BrowserRouter basename="/pf-react">
     <Provider store={store}>
       <App />
     </Provider>

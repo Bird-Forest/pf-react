@@ -2,7 +2,7 @@
   "name": "react-homework-template",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Bird-Forest.github.io/react-examles/",
+  "homepage": "https://Bird-Forest.github.io/pf-react/",
   "dependencies": {
     "@csstools/normalize.css": "^12.0.0",
     "@mui/material": "^5.14.19",
