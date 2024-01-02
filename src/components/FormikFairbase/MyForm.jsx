@@ -2,10 +2,11 @@ import React from 'react';
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import { MyStyled } from './Form.styled';
-import MyInput from './MyInput';
+import MyTextInput from './MyTextInput';
 import MySelect from './MySelect';
+import MyTextarea from './MyTextarea';
+import MyRating from './MyRating';
 import MyCheckbox from './MyCheckbox';
-import { nanoid } from '@reduxjs/toolkit';
 
 const jobType = [
   'Design UI/UX',
@@ -18,9 +19,9 @@ const jobType = [
 const validationSchema = Yup.object({
   name: Yup.string().min(2, 'Too Short!').max(15, 'Too Long!').required(),
   email: Yup.string().email('Invalid email').required(),
-  // password: Yup.string().required(),
-  // review: Yup.string().required(),
-  // rating: Yup.number().required(),
+  password: Yup.string().required(),
+  review: Yup.string().required(),
+  rating: Yup.number().required(),
   agreement: Yup.boolean().required().default(false),
   jobType: Yup.string().oneOf(jobType).required('Please select a job type'),
   date: Yup.date().default(() => new Date()),
@@ -29,69 +30,57 @@ const validationSchema = Yup.object({
 const initialValues = {
   name: '',
   email: '',
-  // password: '',
+  password: '',
   jobType: '',
-  // review: '',
-  // rating: '',
+  review: '',
+  rating: '',
   agreement: false,
   date: new Date(),
 };
 
-export default function SignupForm({ onRegistration }) {
-  // const handleSubmit = (values, { resetForm }) => {
-  //   const email = values.email;
-  //   const password = values.password;
-  //   console.log(email);
-  //   console.log(password);
-  //   onRegistration(email, password);
-  //   console.log(values);
-  //   resetForm();
-  // };
+export default function MyForm() {
   return (
     <MyStyled>
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
-        // onSubmit={handleSubmit}
         onSubmit={(values, { setSubmitting, resetForm }) => {
           setTimeout(() => {
-            console.log(initialValues);
-
+            alert(JSON.stringify(values, null, 2));
+            console.log(values);
             setSubmitting(true);
             resetForm();
           }, 400);
         }}
       >
         {props => (
-          <Form>
-            <MyInput label="Name" name="name" type="text" />
-            <MyInput label="Email" name="email" type="email" />
+          <Form className="my-form" autoComplete="off">
+            <MyTextInput label="Name*" name="name" type="text" />
+            <MyTextInput label="Email*" name="email" type="email" />
+            <MyTextInput label="Password*" name="password" type="password" />
             <MySelect label="Job Type" name="jobType">
-              <option key={nanoid()} value="" className="option">
+              <option value="" className="my-option">
                 Select a job type
               </option>
-              <option key={nanoid()} value="Design UI/UX" className="option">
-                Design UI/UX
-              </option>
-              <option key={nanoid()} value="Fullstack" className="option">
-                Fullstack
-              </option>
-              <option key={nanoid()} value="Project Manager" className="option">
-                Project Manager
-              </option>
-              <option key={nanoid()} value="Data Analyst" className="option">
-                Data Analyst
-              </option>
-              <option key={nanoid()} value="'Sysadmin'" className="option">
-                'Sysadmin'
-              </option>
+              {jobType.map((type, idx) => (
+                <option value={type} key={idx} className="my-option">
+                  {type}
+                </option>
+              ))}
             </MySelect>
+            <MyTextarea label="About me" name="review" type="text" />
+            <MyRating
+              label="Experience"
+              name="rating"
+              type="number"
+              min={0}
+              max={10}
+            />
             <MyCheckbox label="Agreement" name="agreement" type="checkbox">
               I accept the terms and conditions
             </MyCheckbox>
             <button type="submit" className="button">
               {props.isSubmitting ? 'loading...' : 'Submit'}
-              Submit
             </button>
           </Form>
         )}

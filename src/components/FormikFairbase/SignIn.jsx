@@ -2,14 +2,6 @@ import { useDispatch } from 'react-redux';
 import { setUser } from 'store/slices/userSlice';
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import FormikSignIn from './FormikSignIn';
-// import { Link, useLocation } from 'react-router-dom';
-// import {
-//   BtnFormFB,
-//   InputEmail,
-//   InputPass,
-//   TitleFB,
-//   WrapFormFB,
-// } from 'components/RegistrationFB/Form.styled';
 
 export default function SignIn() {
   const dispatch = useDispatch();

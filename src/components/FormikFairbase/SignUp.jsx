@@ -1,16 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { setUser } from 'store/slices/userSlice';
 import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
-// import { Link, useLocation } from 'react-router-dom';
-// import {
-//   BtnFormFB,
-//   Input,
-//   InputBox,
-//   InputPass,
-//   Label,
-//   TitleFB,
-//   WrapFormFB,
-// } from 'components/RegistrationFB/Form.styled';
 
 import FormikSignUp from './FormikSignUp';
 

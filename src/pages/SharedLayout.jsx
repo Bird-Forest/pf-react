@@ -1,11 +1,5 @@
 import React, { Suspense } from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
-// import {
-//   Container,
-//   WrapLeft,
-//   WrapLink,
-//   WrapRight,
-// } from './SharedLayout.styled';
 import { Loading } from 'components/Loader/Loading';
 import { Container, WrapLeft, WrapRight } from './Page.styled';
 

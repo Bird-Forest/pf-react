@@ -20,7 +20,7 @@ export const WrapLeft = styled.div`
   width: 15vw;
   height: 100vmax;
   background-color: #1a237e;
-  margin: 0;
+  margin: 0 0 auto 0;
   padding: 0 16px;
   .navigate {
     font-family: 'Prompt', sans-serif;
@@ -47,25 +47,25 @@ export const WrapRight = styled.div`
   padding: 0;
   /* background-color: #8c9eff; */
 `;
-export const Input = styled.input`
-  position: relative;
-  display: inline-block;
-  padding: 70px 40px;
-  background: #fff;
-  &:focus + label,
-  &:not(:placeholder-shown) + label {
-    transform: translateY(-20px);
-    font-size: 14px;
-    color: #000;
-  }
-`;
-export const Label = styled.label`
-  position: absolute;
-  top: 50%;
-  left: 40px;
-  transform: translateY(-50%);
-  font-size: 16px;
-  color: #999;
-  pointer-events: none;
-  transition: all 0.2s ease-in-out;
-`;
+// export const Input = styled.input`
+//   position: relative;
+//   display: inline-block;
+//   padding: 70px 40px;
+//   background: #fff;
+//   &:focus + label,
+//   &:not(:placeholder-shown) + label {
+//     transform: translateY(-20px);
+//     font-size: 14px;
+//     color: #000;
+//   }
+// `;
+// export const Label = styled.label`
+//   position: absolute;
+//   top: 50%;
+//   left: 40px;
+//   transform: translateY(-50%);
+//   font-size: 16px;
+//   color: #999;
+//   pointer-events: none;
+//   transition: all 0.2s ease-in-out;
+// `;

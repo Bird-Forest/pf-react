@@ -1,18 +1,18 @@
 import { useField } from 'formik';
 import React from 'react';
-// import FormError from './FormError';
+import { CheckboxWrap, ErrorMessage } from './Form.styled';
 
 export default function MyCheckbox({ children, ...props }) {
   const [field, meta] = useField({ ...props, type: 'checkbox' });
   return (
-    <div>
-      <label className="checkbox-input">
-        <input type="checkbox" {...field} {...props} />
+    <CheckboxWrap>
+      <label className="lable-checkbox">
+        <input type="checkbox" {...field} {...props} className="my-checkbox" />
         {children}
       </label>
       {meta.touched && meta.error ? (
-        <div className="error">{meta.error}</div>
+        <ErrorMessage>{meta.error}</ErrorMessage>
       ) : null}
-    </div>
+    </CheckboxWrap>
   );
 }

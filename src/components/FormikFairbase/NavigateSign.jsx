@@ -7,10 +7,10 @@ export default function NavigateSign() {
     <>
       <WrapNavSign>
         <NavLink className="navigate" to="" end>
-          Authorization
+          Sign Up
         </NavLink>
         <NavLink className="navigate" to="sign">
-          Sign in
+          Sign In
         </NavLink>
         <NavLink className="navigate" to="myform">
           My form

@@ -1,6 +1,5 @@
 import React, { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
-// import { WrapFairbase, WrapLinkSign } from './RegisterFB.styled';
 import { Loading } from 'components/Loader/Loading';
 import NavigateSign from 'components/FormikFairbase/NavigateSign';
 import { FormikPageWrap } from 'components/FormikFairbase/Form.styled';

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useField } from 'formik';
+import { ErrorMessage, SelectWrap } from './Form.styled';
 // import FormError from './FormError';
 
 // const jobType = [
@@ -12,17 +13,31 @@ import { useField } from 'formik';
 
 export default function MySelect({ label, ...props }) {
   const [field, meta] = useField(props);
-
   return (
-    <div>
-      <label htmlFor={props.id || props.name}>{label}</label>
-      <select {...field} {...props} />
+    <SelectWrap>
+      <label htmlFor={props.id || props.name} className="label-select">
+        {label}
+      </label>
+      <select {...field} {...props} className="my-select" />
       {meta.touched && meta.error ? (
-        <div className="error">{meta.error}</div>
+        <ErrorMessage>{meta.error}</ErrorMessage>
       ) : null}
-    </div>
+    </SelectWrap>
   );
 }
+
+//  const MySelect = ({ label, ...props }) => {
+//    const [field, meta] = useField(props);
+//    return (
+//      <div>
+//        <label htmlFor={props.id || props.name}>{label}</label>
+//        <select {...field} {...props} />
+//        {meta.touched && meta.error ? (
+//          <div className="error">{meta.error}</div>
+//        ) : null}
+//      </div>
+//    );
+//  };
 
 // {/* <MySelect>
 //   <label htmlFor="jobType" className="label">
