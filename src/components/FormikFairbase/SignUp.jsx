@@ -1,13 +1,21 @@
 import { useDispatch } from 'react-redux';
 import { setUser } from 'store/slices/userSlice';
 import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
+import { createPortal } from 'react-dom';
 
 import FormikSignUp from './FormikSignUp';
+import { useState } from 'react';
+import AuthError from 'components/Portal/AuthError';
 
 export default function SignUp() {
+  const [showError, setShowError] = useState(false);
+  const [errorMes, setErrorMes] = useState('');
+  console.log(showError);
+  console.log(errorMes);
   const dispatch = useDispatch();
   // const location = useLocation();
   // const backLinkHref = location.state?.from ?? '/';
+  // <Link to={backLinkHref} />;
   const auth = getAuth();
 
   const handleSignUp = (email, password) => {
@@ -32,12 +40,20 @@ export default function SignUp() {
         console.log(errorCode);
         const errorMessage = error.message;
         console.error(errorMessage);
+        setErrorMes(errorMessage);
+        setShowError(true);
+        console.log(showError, errorMes);
       });
   };
 
   return (
     <div>
       <FormikSignUp onRegistration={handleSignUp} />
+      {showError &&
+        createPortal(
+          <AuthError message={errorMes} onClose={() => setShowError(false)} />,
+          document.body
+        )}
     </div>
   );
 }

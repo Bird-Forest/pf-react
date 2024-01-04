@@ -1,4 +1,4 @@
-import ModalContent from 'components/Modal/ModalContent';
+import ModalContent from 'components/Portal/ModalContent';
 import useLocalStorage from 'hooks/useLocalStorage';
 import React, { useState } from 'react';
 import { createPortal } from 'react-dom';
