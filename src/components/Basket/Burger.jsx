@@ -27,7 +27,7 @@ export default function Burger({ item }) {
     if (!hasNameBurger) {
       setMode(true);
       setLikes([...likes, item]);
-      console.log('ON LIKE', likes);
+      // console.log('ON LIKE', likes);
     } else {
       alert(`You want to delete burger ${nameBurger} in favorites ?`);
       setMode(false);

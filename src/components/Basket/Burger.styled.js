@@ -4,11 +4,11 @@ import styled from 'styled-components';
 export const BasketPageWrap = styled.div`
   display: block;
   width: 100%;
-  /* height: 100%; */
+  height: 100vmax;
   background-color: #ffe082;
-  background-size: cover;
-  background-repeat: no-repeat;
   background-image: url(${'https://catherineasquithgallery.com/uploads/posts/2021-03/1614857877_175-p-kulinarnii-fon-242.jpg'});
+  background-size: 100%;
+  background-repeat: no-repeat;
   margin: 0;
   padding: 0;
 `;
@@ -94,14 +94,21 @@ export const StyledNavLink = styled(NavLink)`
 `;
 
 // ******************** Burger ***************************
+export const CaseBurger = styled.div`
+  display: flex;
+  width: 100%;
+  height: 100vmax;
+  background-color: #ffac33;
+  padding: 0;
+  margin: 0;
+`;
 export const BurgersWrap = styled.ul`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100%;
-  background-color: #ffac33;
+  height: fit-content;
   gap: 10px;
   padding: 8px 0;
   margin: 0;
@@ -199,15 +206,21 @@ export const BurgVeg = styled.h3`
   margin: 0;
 `;
 // ***********   FavoritesList **************************************
+export const CaseFavor = styled.div`
+  display: flex;
+  width: 100%;
+  height: 100vmax;
+  background-color: #ffd180;
+  padding: 0;
+  margin: 0;
+`;
 export const FavoritesWrap = styled.ul`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   /* align-items: center; */
-  background-color: #ffd180;
   width: 100%;
-  height: 100%;
-  /* height: max-content; */
+  height: fit-content;
   gap: 8px;
   padding: 16px 0;
   margin: 0 auto;
@@ -387,15 +400,21 @@ export const BtDeleteFavor = styled.button`
   }
 `;
 // ****************  BasketList  ***********************
+export const CaseBasket = styled.div`
+  display: flex;
+  width: 100%;
+  height: 100vmax;
+  background-color: #ffd180;
+  padding: 0;
+  margin: 0;
+`;
 export const GoodsWrap = styled.ul`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background-color: #ffd180;
   width: 100%;
-  height: 100%;
-  /* height: max-content; */
+  height: fit-content;
   gap: 8px;
   padding: 16px;
   margin: 0;

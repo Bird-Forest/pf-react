@@ -7,18 +7,18 @@ export const ReaderWrap = styled.div`
   align-items: center;
   background-color: ${props => props.theme.body};
   width: 100%;
-  /* height: 100%; */
+  height: 100vmax;
   padding: 0 0 20px 0;
   margin: 0;
 `;
-export const BtnReaderWrap = styled.section`
+export const BtnReaderWrap = styled.header`
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: ${props => props.theme.header};
   width: 100%;
   /* height: 10vh; */
-  padding: 8px;
+  padding: 8px 0;
   margin-bottom: 16px;
 `;
 export const BtnSun = styled.button`
@@ -80,7 +80,7 @@ export const TextReaderWrap = styled.section`
   justify-content: flex-start;
   align-items: center;
   width: 60%;
-  height: 100%;
+  height: fit-content;
   padding: 20px;
   margin: 0 0 40px 0;
   border-radius: 10px;

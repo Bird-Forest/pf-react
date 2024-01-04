@@ -8,6 +8,7 @@ import {
   BurgNameOrder,
   BurgPriceOrder,
   BurgerCardOrder,
+  CaseBasket,
   CostOfGoods,
   CountBasketWrap,
   CounterOrder,
@@ -44,46 +45,48 @@ export default function BasketList() {
 
   const Arr = Array.isArray(goods) && goods.length > 0;
   return (
-    <GoodsWrap>
-      {Arr &&
-        goods.map(item => {
-          const totalItem = (item.price * item.count).toFixed(2);
-          return (
-            <BurgerCardOrder key={nanoid()} id={item.id}>
-              <InfoBasketWrap>
-                <BtDeleteOrder
-                  type="button"
-                  onClick={handleDeleteLikes}
-                  id={item.id}
-                >
-                  <BsTrash3Fill className="icon-delete-favor" />
-                </BtDeleteOrder>
-                <BurgImgOrder src={item.images[0].sm} alt={item.name} />
-                <BurgNameOrder>{item.name}</BurgNameOrder>
-              </InfoBasketWrap>
-              <CountBasketWrap>
-                <BurgPriceOrder>{item.price.toFixed(2)}</BurgPriceOrder>
-                <BtnAdd onClick={() => onChangeValue(item, +1)}>
-                  <BsCartPlusFill className="icon-add-order" />
-                </BtnAdd>
-                <CounterOrder>{item.count}</CounterOrder>
-                <BtnDash
-                  type="button"
-                  disabled={item.count === 1}
-                  onClick={() => onChangeValue(item, -1)}
-                >
-                  <BsCartDashFill className="icon-delete-order" />
-                </BtnDash>
-                <InTotalItem>{totalItem}</InTotalItem>
-              </CountBasketWrap>
-            </BurgerCardOrder>
-          );
-        })}
-      <CostOfGoods>
-        Total cost of goods:{'    '}
-        {calculateTotal()}
-      </CostOfGoods>
-    </GoodsWrap>
+    <CaseBasket>
+      <GoodsWrap>
+        {Arr &&
+          goods.map(item => {
+            const totalItem = (item.price * item.count).toFixed(2);
+            return (
+              <BurgerCardOrder key={nanoid()} id={item.id}>
+                <InfoBasketWrap>
+                  <BtDeleteOrder
+                    type="button"
+                    onClick={handleDeleteLikes}
+                    id={item.id}
+                  >
+                    <BsTrash3Fill className="icon-delete-favor" />
+                  </BtDeleteOrder>
+                  <BurgImgOrder src={item.images[0].sm} alt={item.name} />
+                  <BurgNameOrder>{item.name}</BurgNameOrder>
+                </InfoBasketWrap>
+                <CountBasketWrap>
+                  <BurgPriceOrder>{item.price.toFixed(2)}</BurgPriceOrder>
+                  <BtnAdd onClick={() => onChangeValue(item, +1)}>
+                    <BsCartPlusFill className="icon-add-order" />
+                  </BtnAdd>
+                  <CounterOrder>{item.count}</CounterOrder>
+                  <BtnDash
+                    type="button"
+                    disabled={item.count === 1}
+                    onClick={() => onChangeValue(item, -1)}
+                  >
+                    <BsCartDashFill className="icon-delete-order" />
+                  </BtnDash>
+                  <InTotalItem>{totalItem}</InTotalItem>
+                </CountBasketWrap>
+              </BurgerCardOrder>
+            );
+          })}
+        <CostOfGoods>
+          Total cost of goods:{'    '}
+          {calculateTotal()}
+        </CostOfGoods>
+      </GoodsWrap>
+    </CaseBasket>
   );
 }
 
