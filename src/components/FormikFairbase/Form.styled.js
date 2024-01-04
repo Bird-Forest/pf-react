@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import myAgree from '../../img/3check.png';
 
 export const FormikPageWrap = styled.div`
   display: flex;
@@ -23,7 +24,6 @@ export const WrapNavSign = styled.nav`
   gap: 40px;
   width: 100%;
   height: 54px;
-  /* gap: 40px; */
   margin: 0;
   padding: 8px 0;
   .navigate {
@@ -70,7 +70,6 @@ export const AuthForm = styled.div`
   height: max-content;
   margin: 0;
   padding: 0 0 8px 0;
-
   .title-auth {
     font-size: 20px;
     text-align: center;
@@ -116,50 +115,7 @@ export const InputBox = styled.div`
     padding: 0;
     margin: 0;
   }
-  /* .error {
-    display: flex;
-    justify-content: centr;
-    width: 300px;
-    font-size: 16px;
-    color: #ff1744;
-    padding: 0;
-    margin: 0;
-  } */
 `;
-// export const StyledField = styled(Field)`
-//   /* position: relative; */
-//   width: 300px;
-//   height: 24px;
-//   font-size: 16px;
-//   border-radius: 8px;
-//   border: 2px solid #616161;
-//   outline: #616161;
-//   padding: 8px;
-//   margin: 0;
-//   &:focus + label,
-//   &:not(:placeholder-shown) + label {
-//     transform: translateY(-32px);
-//     font-size: 16px;
-//     text-align: center;
-//     color: #616161;
-//     outline: #616161;
-//   }
-// `;
-// export const Label = styled.label`
-//   position: absolute;
-//   top: 44%;
-//   left: 28px;
-//   /* transform: translateY(-50%); */
-//   transform: translateY(-44%);
-//   font-size: 16px;
-//   text-align: center;
-//   color: #616161;
-//   background-color: white;
-//   pointer-events: none;
-//   transition: all 0.2s ease-in-out;
-//   padding: 0;
-//   margin: 0;
-// `;
 // ************ Select form ***********
 export const SelectFormWrap = styled.div`
   display: flex;
@@ -182,10 +138,6 @@ export const SelectFormWrap = styled.div`
     margin: 8px 0 8px 0;
   }
   .form-select {
-    /* display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start; */
     width: 316px;
     height: 40px;
     font-size: 16px;
@@ -204,35 +156,6 @@ export const SelectFormWrap = styled.div`
     outline: #616161;
   }
 `;
-// export const SelectTitle = styled.label`
-//   font-size: 20px;
-//   text-align: center;
-//   font-weight: 700;
-//   color: #616161;
-//   padding: 8px;
-// `;
-// export const StyledSelect = styled(Field)`
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: flex-start;
-//   align-items: flex-start;
-//   width: 316px;
-//   height: 40px;
-//   font-size: 16px;
-//   font-weight: 500;
-//   color: #616161;
-//   border-radius: 8px;
-//   border: 2px solid #616161;
-//   outline: #616161;
-//   padding: 8px;
-//   margin: 0;
-//   .option {
-//     font-size: 16px;
-//     color: #616161;
-//     border-radius: 8px;
-//     outline: #616161;
-//   }
-// `;
 // *********** Textarea form *************
 export const AreaFormWrap = styled.div`
   display: flex;
@@ -246,11 +169,6 @@ export const AreaFormWrap = styled.div`
   height: 192px;
   margin: 0;
   .title-area {
-    /* font-size: 20px;
-    text-align: center;
-    font-weight: 700;
-    color: #616161;
-    padding: 8px; */
     font-size: 20px;
     text-align: center;
     font-weight: 700;
@@ -271,25 +189,6 @@ export const AreaFormWrap = styled.div`
     margin: 0;
   }
 `;
-// export const AreatTitle = styled.label`
-//   font-size: 20px;
-//   text-align: center;
-//   font-weight: 700;
-//   color: #616161;
-//   padding: 8px;
-// `;
-// export const StyledTextarea = styled(Field)`
-//   width: 340px;
-//   height: 100px;
-//   font-size: 16px;
-//   font-weight: 500;
-//   color: #616161;
-//   border-radius: 8px;
-//   border: 2px solid #616161;
-//   outline: #616161;
-//   padding: 8px;
-//   margin: 0;
-// `;
 // ************  Rating ********************
 export const RatingFormWrap = styled.div`
   display: flex;
@@ -304,11 +203,6 @@ export const RatingFormWrap = styled.div`
   padding: 0;
   margin: 0;
   .title-rating {
-    /* font-size: 20px;
-    text-align: center;
-    font-weight: 700;
-    color: #616161;
-    padding: 8px; */
     font-size: 20px;
     text-align: center;
     font-weight: 700;
@@ -330,26 +224,6 @@ export const RatingFormWrap = styled.div`
     margin: 0;
   }
 `;
-// export const RatingTitle = styled.label`
-//   font-size: 20px;
-//   text-align: center;
-//   font-weight: 700;
-//   color: #616161;
-//   padding: 8px;
-// `;
-// export const StyledRating = styled(Field)`
-//   width: 60px;
-//   height: 28px;
-//   font-size: 16px;
-//   font-weight: 500;
-//   text-align: center;
-//   color: #616161;
-//   border-radius: 8px;
-//   border: 2px solid #616161;
-//   outline: #616161;
-//   padding: 0;
-//   margin: 0;
-// `;
 // ************  Checkbox ********************
 export const CheckboxFormWrap = styled.div`
   display: flex;
@@ -382,24 +256,6 @@ export const CheckboxFormWrap = styled.div`
     margin: 0;
   }
 `;
-// export const CheckboxLabel = styled.label`
-//   display: flex;
-//   justify-content: ctnter;
-//   align-items: center;
-//   font-size: 16px;
-//   font-weight: 500;
-//   text-align: center;
-//   color: #616161;
-// `;
-// export const StyledCheckbox = styled(Field)`
-//   width: 20px;
-//   height: 20px;
-//   border-radius: 8px;
-//   border: 2px solid #616161;
-//   outline: #616161;
-//   padding: 0;
-//   margin: 0;
-// `;
 // ********** Button- submit ***************
 export const BtnForm = styled.button`
   display: flex;
@@ -443,16 +299,22 @@ export const MyStyled = styled.div`
   background-color: white;
   border-radius: 16px;
   border: 2px solid #eeeeee;
-  /* width: 400px; */
   margin: 40px auto;
-  /* padding: 16px; */
   .my-form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 16px;
+    gap: 20px;
     padding: 20px;
+  }
+  .my-title {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 700;
+    color: #616161;
+    padding: 0;
+    margin: 8px 0 8px 0;
   }
   .button {
     display: flex;
@@ -465,7 +327,7 @@ export const MyStyled = styled.div`
     border-radius: 16px;
     border: 1px solid #bdbdbd;
     outline: #bdbdbd;
-    width: 400px;
+    width: 300px;
     height: 48px;
     margin: 0;
     padding: 0;
@@ -480,7 +342,6 @@ export const ErrorMessage = styled.div`
   color: #ff1744;
   font-size: 16px;
 `;
-
 export const InputWrap = styled.div`
   position: relative;
   display: flex;
@@ -492,11 +353,13 @@ export const InputWrap = styled.div`
     height: 24px;
     font-size: 16px;
     border-radius: 8px;
-    /* border: 2px solid #616161; */
-    border: 2px solid ${props => (props.error ? '#ff1744' : '#616161')};
+    border: 2px solid #616161;
     outline: #616161;
     padding: 8px;
     margin: 0;
+  }
+  .my-input.error {
+    border: 2px solid #ff1744;
   }
   .label-input {
     position: absolute;
@@ -511,17 +374,44 @@ export const InputWrap = styled.div`
     padding: 0;
     margin: 0;
   }
+  .label-input.error {
+    color: #ff1744;
+  }
+  .my-password {
+    width: 300px;
+    height: 24px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 2px solid #616161;
+    outline: #616161;
+    padding: 8px;
+    margin: 0;
+  }
+  .my-password.error {
+    border: 2px solid #ff1744;
+  }
+`;
+export const ShowPasswordButton = styled.button`
+  position: absolute;
+  top: 45%;
+  right: 0;
+  transform: translateY(-45%);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  .icon-eye {
+    width: 24px;
+    height: 24px;
+    fill: #616161;
+  }
 `;
 export const SelectWrap = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background-color: white;
-  border-radius: 16px;
-  border: 2px solid #eeeeee;
   width: 360px;
-  height: 104px;
+  height: 80px;
   padding: 0 0 8px 0;
   margin: 0;
   .label-select {
@@ -544,6 +434,9 @@ export const SelectWrap = styled.div`
     padding: 8px;
     margin: 0;
   }
+  .my-select.error {
+    border: 2px solid #ff1744;
+  }
   .my-option {
     font-size: 16px;
     color: #616161;
@@ -556,11 +449,8 @@ export const TextareaWrap = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background-color: white;
-  border-radius: 16px;
-  border: 2px solid #eeeeee;
   width: 360px;
-  height: 192px;
+  height: 160px;
   margin: 0;
   .label-textarea {
     font-size: 20px;
@@ -582,15 +472,15 @@ export const TextareaWrap = styled.div`
     padding: 8px;
     margin: 0;
   }
+  .my-textarea.error {
+    border: 2px solid #ff1744;
+  }
 `;
 export const RatingWrap = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background-color: white;
-  border-radius: 16px;
-  border: 2px solid #eeeeee;
   width: 200px;
   height: 88px;
   padding: 0;
@@ -616,35 +506,64 @@ export const RatingWrap = styled.div`
     padding: 0;
     margin: 0;
   }
+  .my-rating.error {
+    border: 2px solid #ff1744;
+  }
 `;
 export const CheckboxWrap = styled.div`
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 16px;
-  background-color: white;
-  border-radius: 16px;
-  border: 2px solid #eeeeee;
   width: 360px;
   height: 48px;
   margin: 0;
   padding: 0;
-  .lable-checkbox {
+  .my-checkbox {
+    position: absolute;
+    opacity: 0;
+    left: 47px;
+    width: 18px;
+    height: 18px;
+    padding: 0;
+    margin: 0;
+  }
+  .label-checkbox {
     display: flex;
-    justify-content: ctnter;
+    justify-content: center;
     align-items: center;
     font-size: 16px;
     font-weight: 500;
     text-align: center;
     color: #616161;
+    margin: 0 8px 0 8px;
   }
-  .my-checkbox {
+  .label-checkbox::before {
+    /* z-index: 1; */
+    display: block;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #ff1744;
+    border-radius: 4px;
+    background: white;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    content: '';
+    margin-right: 8px;
+  }
+  .my-checkbox:hover + .label-checkbox::before,
+  .my-checkbox:focus + .label-checkbox::before {
+    border: 2px solid #616161;
+  }
+  .my-checkbox:checked + .label-checkbox::before {
+    display: block;
+    opacity: 1;
+    cursor: pointer;
+    content: '';
     width: 20px;
     height: 20px;
-    border-radius: 8px;
-    border: 2px solid #616161;
-    outline: #616161;
-    padding: 0;
-    margin: 0;
+    border: transparent;
+    background-image: url(${myAgree});
+    background-size: cover;
   }
 `;

@@ -29,9 +29,9 @@ export default function App() {
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<HomePage />} />
           <Route path="fairbase" element={<FormikPage />}>
-            <Route path="" element={<SignUp />} />
-            <Route path="sign" element={<SignIn />} />
-            <Route path="myform" element={<MyForm />} />
+            <Route path="" element={<MyForm />} />
+            <Route path="signup" element={<SignUp />} />
+            <Route path="signin" element={<SignIn />} />
           </Route>
           <Route path="player" element={<PlayerPage />} />
           <Route path="reader" element={<ReaderPage />} />

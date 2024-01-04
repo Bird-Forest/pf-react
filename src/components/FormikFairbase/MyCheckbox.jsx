@@ -4,10 +4,17 @@ import { CheckboxWrap, ErrorMessage } from './Form.styled';
 
 export default function MyCheckbox({ children, ...props }) {
   const [field, meta] = useField({ ...props, type: 'checkbox' });
+  // const errorClass = meta.touched && meta.error ? 'error' : '';
   return (
     <CheckboxWrap>
-      <label className="lable-checkbox">
-        <input type="checkbox" {...field} {...props} className="my-checkbox" />
+      <input
+        name="agreement"
+        type="checkbox"
+        {...field}
+        {...props}
+        className="my-checkbox"
+      />
+      <label htmlFor="agreement" className="label-checkbox">
         {children}
       </label>
       {meta.touched && meta.error ? (
@@ -16,3 +23,4 @@ export default function MyCheckbox({ children, ...props }) {
     </CheckboxWrap>
   );
 }
+// {/* <EvaCheckmarkSquare2Fill/> */}

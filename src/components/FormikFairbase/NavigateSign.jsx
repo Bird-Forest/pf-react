@@ -7,13 +7,13 @@ export default function NavigateSign() {
     <>
       <WrapNavSign>
         <NavLink className="navigate" to="" end>
+          My form
+        </NavLink>
+        <NavLink className="navigate" to="signup">
           Sign Up
         </NavLink>
-        <NavLink className="navigate" to="sign">
+        <NavLink className="navigate" to="signin">
           Sign In
-        </NavLink>
-        <NavLink className="navigate" to="myform">
-          My form
         </NavLink>
       </WrapNavSign>
     </>

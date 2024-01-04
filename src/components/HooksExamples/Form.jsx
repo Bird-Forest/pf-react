@@ -54,7 +54,9 @@ export default function Form() {
           />
         </label>
 
-        <button type="submit">Зарегистрироваться</button>
+        <button type="submit" onClick={() => setShowModal(true)}>
+          Зарегистрироваться
+        </button>
       </form>
       <button onClick={() => setShowModal(true)}>
         Show modal using a portal

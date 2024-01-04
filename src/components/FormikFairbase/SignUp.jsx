@@ -41,24 +41,3 @@ export default function SignUp() {
     </div>
   );
 }
-
-// <h1>Registeration Page</h1>
-// <TitleFB>Form</TitleFB>
-//  <WrapFormFB id="signup" onSubmit={event => handleRegister(event)}>
-//    <InputBox>
-//      <input type="name" name="name" required="required" className="input" />
-//      <span className="span">Name</span>
-//    </InputBox>
-
-//    <Input type="email" name="email" placeholder=" " required="required" />
-//    <Label>Enter your name</Label>
-//    <InputPass
-//      type="password"
-//      name="pass"
-//      placeholder="Password"
-//      required="required"
-//    />
-//    <span>Password</span>
-//    <BtnFormFB type="submit">Sign In</BtnFormFB>
-//    <Link to={backLinkHref}>Home</Link>
-//  </WrapFormFB>;

@@ -7,6 +7,7 @@ import MySelect from './MySelect';
 import MyTextarea from './MyTextarea';
 import MyRating from './MyRating';
 import MyCheckbox from './MyCheckbox';
+import MyPassword from './MyPassword';
 
 const jobType = [
   'Design UI/UX',
@@ -17,12 +18,15 @@ const jobType = [
 ];
 
 const validationSchema = Yup.object({
-  name: Yup.string().min(2, 'Too Short!').max(15, 'Too Long!').required(),
-  email: Yup.string().email('Invalid email').required(),
-  password: Yup.string().required(),
-  review: Yup.string().required(),
-  rating: Yup.number().required(),
-  agreement: Yup.boolean().required().default(false),
+  name: Yup.string()
+    .min(2, 'Too Short!')
+    .max(15, 'Too Long!')
+    .required('This field is required'),
+  email: Yup.string().email('Invalid email').required('This field is required'),
+  password: Yup.string().required('This field is required'),
+  review: Yup.string().required('This field is required'),
+  rating: Yup.number().required('This field is required'),
+  agreement: Yup.boolean().required('This field is required'),
   jobType: Yup.string().oneOf(jobType).required('Please select a job type'),
   date: Yup.date().default(() => new Date()),
 });
@@ -33,7 +37,7 @@ const initialValues = {
   password: '',
   jobType: '',
   review: '',
-  rating: '',
+  rating: '0',
   agreement: false,
   date: new Date(),
 };
@@ -55,9 +59,10 @@ export default function MyForm() {
       >
         {props => (
           <Form className="my-form" autoComplete="off">
+            <h3 className="my-title">Registration</h3>
             <MyTextInput label="Name*" name="name" type="text" />
             <MyTextInput label="Email*" name="email" type="email" />
-            <MyTextInput label="Password*" name="password" type="password" />
+            <MyPassword label="Password*" name="password" type="password" />
             <MySelect label="Job Type" name="jobType">
               <option value="" className="my-option">
                 Select a job type
