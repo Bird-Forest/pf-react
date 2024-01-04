@@ -2,8 +2,13 @@ import { useDispatch } from 'react-redux';
 import { setUser } from 'store/slices/userSlice';
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import FormikSignIn from './FormikSignIn';
+import { useState } from 'react';
+import { createPortal } from 'react-dom';
+import AuthError from 'components/Portal/AuthError';
 
 export default function SignIn() {
+  const [showError, setShowError] = useState(false);
+  const [errorMes, setErrorMes] = useState('');
   const dispatch = useDispatch();
   // const location = useLocation();
   // const backLinkHref = location.state?.from ?? '/';
@@ -13,11 +18,11 @@ export default function SignIn() {
     // evt.preventDefault();
     // const email = evt.target.elements.email.value;
     // const password = evt.target.elements.pass.value;
-    console.log(email, password);
+    // console.log(email, password);
 
     signInWithEmailAndPassword(auth, email, password)
       .then(userCredential => {
-        console.log(userCredential.user);
+        // console.log(userCredential.user);
         dispatch(
           setUser({
             email: userCredential.user.email,
@@ -27,27 +32,23 @@ export default function SignIn() {
         );
       })
       .catch(error => {
-        alert('Invalid user');
         const errorCode = error.code;
         console.log(errorCode);
         const errorMessage = error.message;
-        console.error(errorMessage);
+        // console.error(errorMessage);
+        setErrorMes(errorMessage);
+        setShowError(true);
       });
-    // <Link to={backLinkHref} />;
   };
 
   return (
     <div>
       <FormikSignIn onAutorization={handleSignIn} />
+      {showError &&
+        createPortal(
+          <AuthError message={errorMes} onClose={() => setShowError(false)} />,
+          document.body
+        )}
     </div>
   );
 }
-
-// <h1>Login Page</h1>
-//     <TitleFB>Form</TitleFB>
-//     <WrapFormFB id="login" onSubmit={event => handleLogin(event)}>
-//       <InputEmail type="email" name="email" placeholder="email" />
-//       <InputPass type="password" name="pass" placeholder="password" />
-//       <BtnFormFB type="submit">Sign in</BtnFormFB>
-//       <Link to={backLinkHref}>Home</Link>
-//     </WrapFormFB>

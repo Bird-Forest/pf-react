@@ -19,7 +19,7 @@ export default function FormikSignIn({ onAutorization }) {
     const email = values.email;
     const password = values.password;
     onAutorization(email, password);
-    console.log(values);
+    // console.log(values);
     resetForm();
   };
   return (
@@ -63,5 +63,3 @@ export default function FormikSignIn({ onAutorization }) {
     </WrapFormUp>
   );
 }
-
-// https://github.com/luxplanjay/react-41/blob/04-forms/src/components/ProductReviewForm/ProductReviewForm.jsx

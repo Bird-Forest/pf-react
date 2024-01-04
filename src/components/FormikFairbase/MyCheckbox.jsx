@@ -23,4 +23,3 @@ export default function MyCheckbox({ children, ...props }) {
     </CheckboxWrap>
   );
 }
-// {/* <EvaCheckmarkSquare2Fill/> */}

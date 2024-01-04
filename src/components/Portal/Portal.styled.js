@@ -33,7 +33,6 @@ export const BtnError = styled.button`
   width: 24px;
   height: 24px;
   border: none;
-  /* border-radius: 50%; */
   background-color: #fafafa;
   cursor: pointer;
   padding: 0;

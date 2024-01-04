@@ -53,7 +53,7 @@ export default function FormikSignUp({ onRegistration }) {
     const email = values.email;
     const password = values.password;
     onRegistration(email, password);
-    console.log(values);
+    // console.log(values);
     resetForm();
   };
   return (

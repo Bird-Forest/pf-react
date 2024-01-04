@@ -10,8 +10,6 @@ import AuthError from 'components/Portal/AuthError';
 export default function SignUp() {
   const [showError, setShowError] = useState(false);
   const [errorMes, setErrorMes] = useState('');
-  console.log(showError);
-  console.log(errorMes);
   const dispatch = useDispatch();
   // const location = useLocation();
   // const backLinkHref = location.state?.from ?? '/';
@@ -22,11 +20,11 @@ export default function SignUp() {
     // evt.preventDefault();
     // const email = evt.target.elements.email.value;
     // const password = evt.target.elements.pass.value;
-    console.log(email, password);
+    // console.log(email, password);
 
     createUserWithEmailAndPassword(auth, email, password)
       .then(userCredential => {
-        console.log(userCredential.user);
+        // console.log(userCredential.user);
         dispatch(
           setUser({
             email: userCredential.user.email,
@@ -39,10 +37,9 @@ export default function SignUp() {
         const errorCode = error.code;
         console.log(errorCode);
         const errorMessage = error.message;
-        console.error(errorMessage);
+        // console.error(errorMessage);
         setErrorMes(errorMessage);
         setShowError(true);
-        console.log(showError, errorMes);
       });
   };
 

@@ -51,7 +51,6 @@ export default function MyForm() {
         onSubmit={(values, { setSubmitting, resetForm }) => {
           setTimeout(() => {
             alert(JSON.stringify(values, null, 2));
-            console.log(values);
             setSubmitting(true);
             resetForm();
           }, 400);
