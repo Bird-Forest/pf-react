@@ -11,22 +11,26 @@ export const ReaderWrap = styled.div`
   padding: 0 0 20px 0;
   margin: 0;
 `;
-export const BtnReaderWrap = styled.header`
+export const BtnReaderWrap = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: ${props => props.theme.header};
   width: 100%;
-  /* height: 10vh; */
-  padding: 8px 0;
+  height: 60px;
+  padding: 0;
   margin-bottom: 16px;
+  @media screen and (min-width: 768px) {
+    height: 80px;
+    padding: 16px 0;
+  }
 `;
 export const BtnSun = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 4px;
-  height: 50px;
+  height: 40px;
   width: 80px;
   border-radius: 10px;
   margin-right: 10px;
@@ -46,7 +50,7 @@ export const BtnSun = styled.button`
   }
 `;
 export const BtnLeft = styled.button`
-  height: 50px;
+  height: 40px;
   width: 60px;
   border-radius: 10px;
   margin-right: 10px;
@@ -61,7 +65,7 @@ export const BtnLeft = styled.button`
   }
 `;
 export const BtnRight = styled.button`
-  height: 50px;
+  height: 40px;
   width: 60px;
   border-radius: 10px;
   outline: ${props => props.theme.card};

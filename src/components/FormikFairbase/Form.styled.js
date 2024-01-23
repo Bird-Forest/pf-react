@@ -6,29 +6,27 @@ export const FormikPageWrap = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 85vw;
+  width: 100%;
   height: 100%;
   background-color: #fafafa;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 `;
-
 export const WrapNavSign = styled.nav`
-  /* position: fixed; */
   top: 0;
   right: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #757575;
-  gap: 40px;
+  gap: 8px;
   width: 100%;
-  height: 54px;
+  height: 60px;
   margin: 0;
-  padding: 8px 0;
+  padding: 0;
   .navigate {
     font-family: 'Prompt', sans-serif;
-    font-size: 24px;
+    font-size: clamp(1rem, 0.724rem + 1.38vw, 1.5rem);
     font-weight: 700;
     margin: 0;
     color: #212121;
@@ -38,6 +36,10 @@ export const WrapNavSign = styled.nav`
     &.active {
       color: white;
     }
+  }
+  @media screen and (min-width: 768px) {
+    min-height: 80px;
+    gap: 40px;
   }
 `;
 // *******  All form **************

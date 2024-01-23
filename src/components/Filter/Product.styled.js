@@ -6,7 +6,7 @@ export const FilterBar = styled.div`
   display: flex;
   width: 100%;
   height: 60px;
-  background-color: #5c6bc0;
+  background-color: #0d47a1;
   padding: 0;
   margin: 0;
   @media screen and (min-width: 768px) {
@@ -23,10 +23,13 @@ export const FilterBar = styled.div`
 export const BtnFilter = styled.div`
   display: block;
   width: 60px;
-  height: 80px;
-  font-size: 16px;
+  height: 60px;
+  font-size: 20px;
   font-weight: 700;
+  text-align: center;
   color: white;
+  padding: 0;
+  margin: 16px 0 8px 0;
   cursor: pointer;
   padding: 0;
   @media screen and (min-width: 768px) {
@@ -49,7 +52,7 @@ export const FilterWrap = styled.div`
   left: 0;
   width: 240px;
   height: 600px;
-  background-color: #5c6bc0;
+  background-color: #0d47a1;
 
   display: flex;
   flex-direction: column;
@@ -92,19 +95,19 @@ export const SelectForm = styled.select`
   display: flex;
   width: 88px;
   height: 40px;
-  font-size: clamp(8px, 0.318rem + 0.91vw, 16px);
+  font-size: clamp(0.5rem, 2.5vw, 1.25rem);
   font-weight: 700;
   color: white;
-  background-color: #5c6bc0;
-  border-color: #5c6bc0;
+  background-color: #0d47a1;
+  border-color: #0d47a1;
   text-align: center;
-  outline: #5c6bc0;
+  outline: #0d47a1;
   padding: 0;
   margin: 0;
   cursor: pointer;
 `;
 export const OptionForm = styled.option`
-  font-size: clamp(8px, 0.318rem + 0.91vw, 16px);
+  font-size: clamp(0.5rem, 2.5vw, 1.25rem);
   font-weight: 500;
 `;
 export const RangeWrap = styled.div`
@@ -118,7 +121,7 @@ export const RangeWrap = styled.div`
   margin: 0;
 `;
 export const LabelRange = styled.label`
-  font-size: clamp(8px, 0.318rem + 0.91vw, 16px);
+  font-size: clamp(0.5rem, 2.5vw, 1.25rem);
   font-weight: 700;
   color: white;
   padding: 0;
@@ -132,7 +135,7 @@ export const InputRange = styled.input`
 `;
 export const SpanRange = styled.span`
   text-align: left;
-  font-size: clamp(8px, 0.318rem + 0.91vw, 16px);
+  font-size: clamp(0.5rem, 2.5vw, 1.25rem);
   font-weight: 700;
   color: white;
   padding: 0;
@@ -141,11 +144,11 @@ export const SpanRange = styled.span`
 export const BtnClear = styled.button`
   width: 60px;
   height: 40px;
-  background-color: #5c6bc0;
+  background-color: #0d47a1;
   outline: #5c6bc0;
-  border-color: #5c6bc0;
+  border-color: #0d47a1;
   border: none;
-  font-size: clamp(8px, 0.318rem + 0.91vw, 16px);
+  font-size: clamp(0.5rem, 2.5vw, 1.25rem);
   font-weight: 700;
   color: white;
   padding: 0;
@@ -156,7 +159,7 @@ export const BtnClear = styled.button`
 export const FriendsWrap = styled.div`
   display: flex;
   width: 100%;
-  height: 100vmax;
+  height: fit-content;
   background-color: #e8eaf6;
   padding: 0 0 20px 0;
   margin: 0;

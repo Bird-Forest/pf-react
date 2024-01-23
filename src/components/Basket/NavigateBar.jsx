@@ -3,6 +3,7 @@ import { NavigateBasket, StyledNavLink } from './Burger.styled';
 import { NavLink } from 'react-router-dom';
 import { BsBasket3Fill, BsHeartFill } from 'react-icons/bs';
 import { BasketContext, FavoritesContext } from './ProductProvider';
+import MobileMenu from 'components/MobileMenu';
 
 export default function NavigateBar() {
   const { goods } = useContext(BasketContext);
@@ -13,6 +14,7 @@ export default function NavigateBar() {
   return (
     <>
       <NavigateBasket>
+        <MobileMenu />
         <NavLink className="home" to="" end>
           Home
         </NavLink>

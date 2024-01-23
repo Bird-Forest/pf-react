@@ -98,7 +98,7 @@ export default function FriendList() {
         {isLoading && <Loading />}
         <MobileMenu />
         <BtnFilter onClick={() => setIsHidden(!isHidden)}>Filters</BtnFilter>
-        {!isHidden && (
+        {!isHidden ? (
           <FilterArray
             getFilter={getFilter}
             friends={friends}
@@ -109,6 +109,15 @@ export default function FriendList() {
             style={{
               transform: isHidden ? 'translate(0, -100%)' : 'translate(0, 0)',
             }}
+          />
+        ) : (
+          <FilterArray
+            getFilter={getFilter}
+            friends={friends}
+            filters={filters}
+            clearFilter={clearFilter}
+            age={age}
+            onRange={onRange}
           />
         )}
         {/* <FilterArray

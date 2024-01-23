@@ -22,11 +22,15 @@ export const BtnHome = styled.button`
   display: block;
   width: 60px;
   height: 60px;
+  background-color: transparent;
+  border: none;
   cursor: pointer;
+  padding: 0;
+  margin: 0 60px 0 20px;
   .icon-home {
     width: 40px;
     height: 40px;
-    fill: white;
+    fill: #2196f3;
   }
   @media screen and (min-width: 768px) {
     display: none;
@@ -37,9 +41,10 @@ export const WrapMobile = styled.div`
   top: 60px;
   left: 0;
   display: flex;
+
   width: 240px;
   height: 600px;
-  background-color: red;
+  background-color: #2196f3;
 `;
 export const WrapLeft = styled.div`
   display: none;
@@ -50,34 +55,30 @@ export const WrapLeft = styled.div`
     width: 15vw;
     height: 100vmax;
     padding: 0 8px;
-    background-color: #1a237e;
+    background-color: #2196f3;
     margin: 0 0 auto 0;
     padding: 0 16px;
   }
 `;
 
 export const WrapMenu = styled.div`
-  /* top: 0;
-  left: 0; */
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  /* width: 15vw;
-  height: 100vmax; */
-  /* background-color: #1a237e;
+  gap: 24px;
   margin: 0 0 auto 0;
-  padding: 0 16px; */
+  padding: 40px;
   .navigate {
     font-family: 'Prompt', sans-serif;
     display: block;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 700;
     color: white;
     text-decoration: none;
     transition: all 0.3s;
     &.active {
-      color: #304ffe;
+      color: #0d47a1;
     }
   }
 `;

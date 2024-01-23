@@ -9,7 +9,7 @@ export const BasketPageWrap = styled.div`
   background-image: url(${'https://catherineasquithgallery.com/uploads/posts/2021-03/1614857877_175-p-kulinarnii-fon-242.jpg'});
   background-size: 100%;
   background-repeat: no-repeat;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 `;
 // ****************** Header ******************
@@ -18,14 +18,15 @@ export const NavigateBasket = styled.div`
   right: 0;
   display: flex;
   justify-content: flex-end;
-  align-items: flex-end;
+  align-items: center;
+  gap: 8px;
   width: 100%;
   background-color: #754a08;
   padding: 0;
   margin: 0;
   .burgers {
     font-family: 'Prompt', sans-serif;
-    font-size: 28px;
+    font-size: clamp(1rem, 0.724rem + 1.38vw, 1.5rem);
     font-weight: 700;
     color: #64dd17;
     text-decoration: none;
@@ -38,7 +39,7 @@ export const NavigateBasket = styled.div`
   }
   .home {
     font-family: 'Prompt', sans-serif;
-    font-size: 28px;
+    font-size: clamp(1rem, 0.724rem + 1.38vw, 1.5rem);
     font-weight: 700;
     color: #64dd17;
     text-decoration: none;
@@ -82,7 +83,7 @@ export const StyledNavLink = styled(NavLink)`
     align-items: center;
     width: 32px;
     height: 32px;
-    font-size: clamp(12px, 0.568rem + 0.91vw, 20px);
+    font-size: clamp(1rem, 0.724rem + 1.38vw, 1.5rem);
     font-weight: 700;
     text-decoration: none;
     color: #ff9800;
