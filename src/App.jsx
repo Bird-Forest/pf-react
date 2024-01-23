@@ -6,16 +6,8 @@ const FormikPage = lazy(() => import('pages/FormikPage'));
 const SignIn = lazy(() => import('components/FormikFairbase/SignIn'));
 const SignUp = lazy(() => import('components/FormikFairbase/SignUp'));
 const MyForm = lazy(() => import('components/FormikFairbase/MyForm'));
-const PlayerPage = lazy(() => import('pages/PlayerPage'));
 const ReaderPage = lazy(() => import('pages/ReaderPage'));
-const RequestPage = lazy(() => import('pages/RequestPage'));
-const HooksPage = lazy(() => import('pages/HooksPage'));
-const Counter = lazy(() => import('components/HooksExamples/Counter'));
-const Form = lazy(() => import('components/HooksExamples/Form'));
-const Clock = lazy(() => import('components/HooksExamples/Clock'));
-const Friends = lazy(() => import('components/HooksExamples/Friends'));
-const Formik = lazy(() => import('components/HooksExamples/Formik'));
-const Products = lazy(() => import('components/Filter/Products'));
+const FriendList = lazy(() => import('components/Filter/FriendList'));
 const BasketPage = lazy(() => import('pages/BasketPage'));
 const HomeBurger = lazy(() => import('components/Basket/HomeBurger'));
 const ShowcaseBurgers = lazy(() => import('components/Basket/ShowcaseBurgers'));
@@ -33,17 +25,8 @@ export default function App() {
             <Route path="signup" element={<SignUp />} />
             <Route path="signin" element={<SignIn />} />
           </Route>
-          <Route path="player" element={<PlayerPage />} />
           <Route path="reader" element={<ReaderPage />} />
-          <Route path="request" element={<RequestPage />} />
-          <Route path="hooks" element={<HooksPage />}>
-            <Route path="counter" element={<Counter />} />
-            <Route path="form" element={<Form />} />
-            <Route path="clock" element={<Clock />} />
-            <Route path="friend" element={<Friends />} />
-            <Route path="formik" element={<Formik />} />
-          </Route>
-          <Route path="product" element={<Products />} />
+          <Route path="filter" element={<FriendList />} />
           <Route path="basket" element={<BasketPage />}>
             <Route path="" element={<HomeBurger />} />
             <Route path="burger" element={<ShowcaseBurgers />} />

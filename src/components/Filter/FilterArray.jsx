@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   BtnClear,
   FilterForm,
@@ -18,18 +19,18 @@ function getCategories(items, itemName) {
   }, []);
 }
 
-export default function Filters({
-  products,
+export default function FilterArray({
+  friends,
   filters,
   getFilter,
-  price,
+  age,
   onRange,
   clearFilter,
 }) {
-  const departments = getCategories(products, 'department');
-  const materials = getCategories(products, 'material');
-  const names = getCategories(products, 'name');
-  const countries = getCategories(products, 'country');
+  const country = getCategories(friends, 'country');
+  const animal = getCategories(friends, 'animal');
+  const job = getCategories(friends, 'job');
+  const music = getCategories(friends, 'music');
 
   const handleOnChangeFilter = event => {
     const key = event.target.name;
@@ -39,62 +40,14 @@ export default function Filters({
     // filterProducts(key, value);
   };
 
-  const handleOnChangePrice = event => {
-    const newPrice = event.target.value;
-    onRange(newPrice);
-    // filterProd(newPrice);
+  const handleOnChangeValue = event => {
+    const newValue = event.target.value;
+    onRange(newValue);
+    console.log(newValue);
   };
 
   return (
     <FilterWrap>
-      <FilterForm>
-        {/* <label htmlFor="department"></label> */}
-        <SelectForm
-          id="department"
-          name="department"
-          value={filters.department || ''}
-          onChange={handleOnChangeFilter}
-        >
-          <OptionForm value="">Department</OptionForm>
-          {departments.map(option => (
-            <OptionForm key={option} value={option}>
-              {option}
-            </OptionForm>
-          ))}
-        </SelectForm>
-      </FilterForm>
-      <FilterForm>
-        {/* <label htmlFor="name"></label> */}
-        <SelectForm
-          id="name"
-          name="name"
-          value={filters.name || ''}
-          onChange={handleOnChangeFilter}
-        >
-          <OptionForm value="">Product</OptionForm>
-          {names.map(option => (
-            <OptionForm key={option} value={option}>
-              {option}
-            </OptionForm>
-          ))}
-        </SelectForm>
-      </FilterForm>
-      <FilterForm>
-        {/* <label htmlFor="material"></label> */}
-        <SelectForm
-          id="material"
-          name="material"
-          value={filters.material || ''}
-          onChange={handleOnChangeFilter}
-        >
-          <OptionForm value="">Material</OptionForm>
-          {materials.map(option => (
-            <OptionForm key={option} value={option}>
-              {option}
-            </OptionForm>
-          ))}
-        </SelectForm>
-      </FilterForm>
       <FilterForm>
         <SelectForm
           id="country"
@@ -103,7 +56,52 @@ export default function Filters({
           onChange={handleOnChangeFilter}
         >
           <OptionForm value="">Country</OptionForm>
-          {countries.map(option => (
+          {country.map(option => (
+            <OptionForm key={option} value={option}>
+              {option}
+            </OptionForm>
+          ))}
+        </SelectForm>
+      </FilterForm>
+      <FilterForm>
+        <SelectForm
+          id="animal"
+          name="animal"
+          value={filters.animal || ''}
+          onChange={handleOnChangeFilter}
+        >
+          <OptionForm value="">Animal</OptionForm>
+          {animal.map(option => (
+            <OptionForm key={option} value={option}>
+              {option}
+            </OptionForm>
+          ))}
+        </SelectForm>
+      </FilterForm>
+      <FilterForm>
+        <SelectForm
+          id="job"
+          name="job"
+          value={filters.job || ''}
+          onChange={handleOnChangeFilter}
+        >
+          <OptionForm value="">Job</OptionForm>
+          {job.map(option => (
+            <OptionForm key={option} value={option}>
+              {option}
+            </OptionForm>
+          ))}
+        </SelectForm>
+      </FilterForm>
+      <FilterForm>
+        <SelectForm
+          id="music"
+          name="music"
+          value={filters.music || ''}
+          onChange={handleOnChangeFilter}
+        >
+          <OptionForm value="">Music</OptionForm>
+          {music.map(option => (
             <OptionForm key={option} value={option}>
               {option}
             </OptionForm>
@@ -111,18 +109,18 @@ export default function Filters({
         </SelectForm>
       </FilterForm>
       <RangeWrap>
-        <LabelRange htmlFor="price">Price</LabelRange>
+        <LabelRange htmlFor="age">Age</LabelRange>
         <InputRange
           type="range"
-          id="price"
-          name="price"
-          min={0}
-          max={1000}
-          step={100}
-          value={price}
-          onChange={handleOnChangePrice}
+          id="age"
+          name="age"
+          min={10}
+          max={100}
+          step={5}
+          value={age}
+          onChange={handleOnChangeValue}
         />
-        <SpanRange id="ranger">{price}</SpanRange>
+        <SpanRange id="ranger">{age}</SpanRange>
       </RangeWrap>
       <BtnClear type="button" onClick={clearFilter}>
         Clear

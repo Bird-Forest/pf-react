@@ -6,22 +6,68 @@ export const Container = styled.div`
   justify-content: space-between;
   align-items: flex-start;
   width: 100%;
-  /* height: 100%; */
+  height: 100%;
   margin: 0 auto;
   padding: 0;
 `;
-export const WrapLeft = styled.div`
-  top: 0;
+export const MobileBox = styled.div`
+  display: block;
+  padding: 0;
+  margin: 0;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+`;
+export const BtnHome = styled.button`
+  display: block;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  .icon-home {
+    width: 40px;
+    height: 40px;
+    fill: white;
+  }
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+`;
+export const WrapMobile = styled.div`
+  position: absolute;
+  top: 60px;
   left: 0;
+  display: flex;
+  width: 240px;
+  height: 600px;
+  background-color: red;
+`;
+export const WrapLeft = styled.div`
+  display: none;
+  @media screen and (min-width: 768px) {
+    top: 0;
+    left: 0;
+    display: block;
+    width: 15vw;
+    height: 100vmax;
+    padding: 0 8px;
+    background-color: #1a237e;
+    margin: 0 0 auto 0;
+    padding: 0 16px;
+  }
+`;
+
+export const WrapMenu = styled.div`
+  /* top: 0;
+  left: 0; */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 15vw;
-  height: 100vmax;
-  background-color: #1a237e;
+  /* width: 15vw;
+  height: 100vmax; */
+  /* background-color: #1a237e;
   margin: 0 0 auto 0;
-  padding: 0 16px;
+  padding: 0 16px; */
   .navigate {
     font-family: 'Prompt', sans-serif;
     display: block;
@@ -40,32 +86,25 @@ export const WrapRight = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 85vw;
+  width: 100%;
   height: 100vmax;
   /* overflow-y: scroll; */
   margin: 0;
   padding: 0;
-  /* background-color: #8c9eff; */
+  @media screen and (min-width: 767px) {
+    width: 85vw;
+  }
 `;
-// export const Input = styled.input`
-//   position: relative;
-//   display: inline-block;
-//   padding: 70px 40px;
-//   background: #fff;
-//   &:focus + label,
-//   &:not(:placeholder-shown) + label {
-//     transform: translateY(-20px);
-//     font-size: 14px;
-//     color: #000;
-//   }
-// `;
-// export const Label = styled.label`
-//   position: absolute;
-//   top: 50%;
-//   left: 40px;
-//   transform: translateY(-50%);
-//   font-size: 16px;
-//   color: #999;
-//   pointer-events: none;
-//   transition: all 0.2s ease-in-out;
-// `;
+export const HomeHeader = styled.div`
+  top: 0;
+  right: 0;
+  display: flex;
+  width: 100%;
+  height: 60px;
+  padding: 0;
+  margin: 0;
+  background-color: aliceblue;
+  @media screen and (min-width: 767px) {
+    height: 80px;
+  }
+`;

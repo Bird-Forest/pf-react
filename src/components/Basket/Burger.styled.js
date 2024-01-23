@@ -383,6 +383,10 @@ export const BtBasketFavor = styled.button`
     height: 32px;
     fill: #ff9800;
   }
+  .icon-basket-favor:hover,
+  .icon-basket-favor:focus {
+    fill: #e65100;
+  }
 `;
 export const BtDeleteFavor = styled.button`
   display: flex;
@@ -393,10 +397,18 @@ export const BtDeleteFavor = styled.button`
   cursor: pointer;
   margin: 0 24px 0 0;
   padding: 0;
+  &:hover,
+  &:focus {
+    color: #e65100;
+  }
   .icon-delete-favor {
     width: 32px;
     height: 32px;
     fill: #ff9800;
+  }
+  .icon-delete-favor:hover,
+  .icon-delete-favor:focus {
+    fill: #e65100;
   }
 `;
 // ****************  BasketList  ***********************
@@ -452,6 +464,10 @@ export const BtDeleteOrder = styled.button`
     height: 32px;
     fill: #ff9800;
   }
+  .icon-delete-favor:hover,
+  .icon-delete-favor:focus {
+    fill: #e65100;
+  }
 `;
 export const BurgImgOrder = styled.img`
   display: block;
@@ -505,6 +521,10 @@ export const BtnAdd = styled.button`
     height: 32px;
     fill: #ff9800;
   }
+  .icon-add-order:hover,
+  .icon-add-order:focus {
+    fill: #e65100;
+  }
 `;
 export const CounterOrder = styled.span`
   display: flex;
@@ -532,6 +552,10 @@ export const BtnDash = styled.button`
     width: 32px;
     height: 32px;
     fill: #ff9800;
+  }
+  .icon-delete-order:hover,
+  .icon-delete-order:focus {
+    fill: #e65100;
   }
 `;
 export const InTotalItem = styled.span`
