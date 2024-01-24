@@ -10,16 +10,9 @@ export const FilterBar = styled.div`
   padding: 0;
   margin: 0;
   @media screen and (min-width: 768px) {
-    // width: 85vw;
     height: 80px;
   }
 `;
-// export const MobileFilterArr = styled.div`
-//   display: block;
-//   @media screen and (min-width: 768px) {
-//     display: none;
-//   }
-// `;
 export const BtnFilter = styled.div`
   display: block;
   width: 60px;
@@ -36,33 +29,22 @@ export const BtnFilter = styled.div`
     display: none;
   }
 `;
-
-// export const FMWrap = styled.div`
-//   position: absolute;
-//   top: 60px;
-//   left: 0;
-//   display: block;
-//   width: 240px;
-//   height: 600px;
-//   background-color: #5c6bc0;
-// `;
-export const FilterWrap = styled.div`
+export const FilterMobileWrap = styled.div`
   position: absolute;
   top: 60px;
   left: 0;
   width: 240px;
   height: 600px;
   background-color: #0d47a1;
-
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-
-  gap: 4px;
+  gap: 8px;
   padding: 8px;
   margin: 0;
-
+`;
+export const FilterWrap = styled.div`
   @media screen and (min-width: 768px) {
     position: relative;
     top: 0;
@@ -71,20 +53,13 @@ export const FilterWrap = styled.div`
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    background-color: #0d47a1;
     width: 100%;
     height: 60px;
     gap: 4px;
-    padding: 8px;
+    padding: 4px;
     margin: 0;
   }
-  /* display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
-  gap: 4px;
-  padding: 8px;
-  margin: 0; */
 `;
 export const FilterForm = styled.form`
   display: inline-block;
@@ -93,7 +68,7 @@ export const FilterForm = styled.form`
 `;
 export const SelectForm = styled.select`
   display: flex;
-  width: 88px;
+  width: 84px;
   height: 40px;
   font-size: clamp(0.5rem, 2.5vw, 1.25rem);
   font-weight: 700;
@@ -115,8 +90,6 @@ export const RangeWrap = styled.div`
   justify-content: flex-start;
   align-items: center;
   gap: 4px;
-  /* width: 160px;
-  height: 60px; */
   padding: 0;
   margin: 0;
 `;
@@ -159,7 +132,7 @@ export const BtnClear = styled.button`
 export const FriendsWrap = styled.div`
   display: flex;
   width: 100%;
-  height: fit-content;
+  height: 100%;
   background-color: #e8eaf6;
   padding: 0 0 20px 0;
   margin: 0;

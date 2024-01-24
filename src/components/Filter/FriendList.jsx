@@ -4,15 +4,16 @@ import { Loading } from 'components/Loader/Loading';
 import {
   BtnFilter,
   FilterBar,
+  FilterMobileWrap,
+  FilterWrap,
   FriendsList,
   FriendsWrap,
 } from './Product.styled';
-import { nanoid } from '@reduxjs/toolkit';
 import FilterArray from './FilterArray';
-import FriendItem from './FriendItem';
 import MobileMenu from 'components/MobileMenu';
-// import { createPortal } from 'react-dom';
-// import MobileFilter from './MobileFilter';
+import WindowWidth from 'components/WindowWidth';
+import FriendItem from './FriendItem';
+import { nanoid } from '@reduxjs/toolkit';
 
 export default function FriendList() {
   const [isHidden, setIsHidden] = useState(true);
@@ -90,6 +91,8 @@ export default function FriendList() {
 
   const filterArray = filterFriends(friends, filters);
 
+  const widthVuport = WindowWidth();
+
   const Arr = Array.isArray(filterArray) && filterArray.length > 0;
 
   return (
@@ -98,39 +101,35 @@ export default function FriendList() {
         {isLoading && <Loading />}
         <MobileMenu />
         <BtnFilter onClick={() => setIsHidden(!isHidden)}>Filters</BtnFilter>
-        {!isHidden ? (
-          <FilterArray
-            getFilter={getFilter}
-            friends={friends}
-            filters={filters}
-            clearFilter={clearFilter}
-            age={age}
-            onRange={onRange}
-            style={{
-              transform: isHidden ? 'translate(0, -100%)' : 'translate(0, 0)',
-            }}
-          />
+        {widthVuport < 768 ? (
+          !isHidden && (
+            <FilterMobileWrap
+              style={{
+                transform: isHidden ? 'translate(0, -100%)' : 'translate(0, 0)',
+              }}
+            >
+              <FilterArray
+                getFilter={getFilter}
+                friends={friends}
+                filters={filters}
+                clearFilter={clearFilter}
+                age={age}
+                onRange={onRange}
+              />
+            </FilterMobileWrap>
+          )
         ) : (
-          <FilterArray
-            getFilter={getFilter}
-            friends={friends}
-            filters={filters}
-            clearFilter={clearFilter}
-            age={age}
-            onRange={onRange}
-          />
+          <FilterWrap>
+            <FilterArray
+              getFilter={getFilter}
+              friends={friends}
+              filters={filters}
+              clearFilter={clearFilter}
+              age={age}
+              onRange={onRange}
+            />
+          </FilterWrap>
         )}
-        {/* <FilterArray
-          getFilter={getFilter}
-          friends={friends}
-          filters={filters}
-          clearFilter={clearFilter}
-          age={age}
-          onRange={onRange}
-          style={{
-            transform: isHidden ? 'translate(0, -100%)' : 'translate(0, 0)',
-          }}
-        /> */}
       </FilterBar>
       <FriendsWrap>
         <FriendsList>

@@ -2,7 +2,6 @@ import React from 'react';
 import {
   BtnClear,
   FilterForm,
-  FilterWrap,
   InputRange,
   LabelRange,
   OptionForm,
@@ -47,7 +46,7 @@ export default function FilterArray({
   };
 
   return (
-    <FilterWrap>
+    <>
       <FilterForm>
         <SelectForm
           id="country"
@@ -125,6 +124,6 @@ export default function FilterArray({
       <BtnClear type="button" onClick={clearFilter}>
         Clear
       </BtnClear>
-    </FilterWrap>
+    </>
   );
 }
