@@ -8,8 +8,8 @@ export const BasketContext = createContext(null);
 export default function ProductProvider({ children }) {
   const [likes, setLikes] = useState([]);
   const [goods, setGoods] = useState([]);
-  console.log('Provider likes', likes);
-  console.log('Provider  goods', goods);
+  // console.log('Provider likes', likes);
+  // console.log('Provider  goods', goods);
 
   return (
     <BasketContext.Provider value={{ goods, setGoods }}>

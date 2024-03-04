@@ -9,6 +9,6 @@ export default function WindowWidth() {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
-  console.log(width);
+  // console.log(width);
   return width;
 }

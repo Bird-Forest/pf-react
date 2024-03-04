@@ -7,7 +7,7 @@ const SignIn = lazy(() => import('components/FormikFairbase/SignIn'));
 const SignUp = lazy(() => import('components/FormikFairbase/SignUp'));
 const MyForm = lazy(() => import('components/FormikFairbase/MyForm'));
 const ReaderPage = lazy(() => import('pages/ReaderPage'));
-const FriendList = lazy(() => import('components/Filter/FriendList'));
+const FilterPage = lazy(() => import('pages/FilterPage'));
 const BasketPage = lazy(() => import('pages/BasketPage'));
 const HomeBurger = lazy(() => import('components/Basket/HomeBurger'));
 const ShowcaseBurgers = lazy(() => import('components/Basket/ShowcaseBurgers'));
@@ -26,7 +26,7 @@ export default function App() {
             <Route path="signin" element={<SignIn />} />
           </Route>
           <Route path="reader" element={<ReaderPage />} />
-          <Route path="filter" element={<FriendList />} />
+          <Route path="filter" element={<FilterPage />} />
           <Route path="basket" element={<BasketPage />}>
             <Route path="" element={<HomeBurger />} />
             <Route path="burger" element={<ShowcaseBurgers />} />

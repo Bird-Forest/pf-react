@@ -2,6 +2,7 @@ import styled from 'styled-components';
 // import clock from '../img/clock1.png';
 
 export const Container = styled.div`
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -19,17 +20,19 @@ export const MobileBox = styled.div`
   }
 `;
 export const BtnHome = styled.button`
-  display: block;
-  width: 60px;
-  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
   background-color: transparent;
   border: none;
   cursor: pointer;
   padding: 0;
-  margin: 0 60px 0 20px;
+  margin: 2px 60px 0 20px;
   .icon-home {
-    width: 40px;
-    height: 40px;
+    width: 28px;
+    height: 28px;
     fill: #2196f3;
   }
   @media screen and (min-width: 768px) {
@@ -38,12 +41,11 @@ export const BtnHome = styled.button`
 `;
 export const WrapMobile = styled.div`
   position: absolute;
-  top: 60px;
+  top: 44px;
   left: 0;
   display: flex;
-
-  width: 240px;
-  height: 600px;
+  width: 100%;
+  height: fit-content;
   background-color: #2196f3;
 `;
 export const WrapLeft = styled.div`
@@ -53,7 +55,7 @@ export const WrapLeft = styled.div`
     left: 0;
     display: block;
     width: 15vw;
-    height: 100vmax;
+    height: 100%;
     padding: 0 8px;
     background-color: #2196f3;
     margin: 0 0 auto 0;
@@ -72,7 +74,7 @@ export const WrapMenu = styled.div`
   .navigate {
     font-family: 'Prompt', sans-serif;
     display: block;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
     color: white;
     text-decoration: none;
@@ -88,7 +90,7 @@ export const WrapRight = styled.div`
   justify-content: flex-start;
   align-items: center;
   width: 100%;
-  height: 100vmax;
+  height: 100%;
   /* overflow-y: scroll; */
   margin: 0;
   padding: 0;

@@ -5,24 +5,24 @@ export const FilterBar = styled.div`
   right: 0;
   display: flex;
   width: 100%;
-  height: 60px;
+  height: 44px;
   background-color: #0d47a1;
   padding: 0;
   margin: 0;
   @media screen and (min-width: 768px) {
-    height: 80px;
+    height: 60px;
   }
 `;
 export const BtnFilter = styled.div`
   display: block;
   width: 60px;
-  height: 60px;
-  font-size: 20px;
-  font-weight: 700;
-  text-align: center;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: left;
   color: white;
   padding: 0;
-  margin: 16px 0 8px 0;
+  margin: 12px 0 8px 0;
   cursor: pointer;
   padding: 0;
   @media screen and (min-width: 768px) {
@@ -31,10 +31,10 @@ export const BtnFilter = styled.div`
 `;
 export const FilterMobileWrap = styled.div`
   position: absolute;
-  top: 60px;
+  top: 44px;
   left: 0;
-  width: 240px;
-  height: 600px;
+  width: 100%;
+  height: fit-content;
   background-color: #0d47a1;
   display: flex;
   flex-direction: column;
@@ -42,7 +42,7 @@ export const FilterMobileWrap = styled.div`
   align-items: center;
   gap: 8px;
   padding: 8px;
-  margin: 0;
+  /* margin: 0; */
 `;
 export const FilterWrap = styled.div`
   @media screen and (min-width: 768px) {
@@ -70,20 +70,20 @@ export const SelectForm = styled.select`
   display: flex;
   width: 84px;
   height: 40px;
-  font-size: clamp(0.5rem, 2.5vw, 1.25rem);
-  font-weight: 700;
+  font-size: clamp(0.75rem, 0.659rem + 0.45vw, 1rem);
+  font-weight: 500;
   color: white;
   background-color: #0d47a1;
   border-color: #0d47a1;
-  text-align: center;
+  text-align: left;
   outline: #0d47a1;
   padding: 0;
   margin: 0;
   cursor: pointer;
 `;
 export const OptionForm = styled.option`
-  font-size: clamp(0.5rem, 2.5vw, 1.25rem);
-  font-weight: 500;
+  font-size: clamp(0.75rem, 0.659rem + 0.45vw, 1rem);
+  font-weight: 400;
 `;
 export const RangeWrap = styled.div`
   display: flex;
@@ -94,8 +94,8 @@ export const RangeWrap = styled.div`
   margin: 0;
 `;
 export const LabelRange = styled.label`
-  font-size: clamp(0.5rem, 2.5vw, 1.25rem);
-  font-weight: 700;
+  font-size: clamp(0.75rem, 0.659rem + 0.45vw, 1rem);
+  font-weight: 500;
   color: white;
   padding: 0;
   margin: 0;
@@ -108,8 +108,8 @@ export const InputRange = styled.input`
 `;
 export const SpanRange = styled.span`
   text-align: left;
-  font-size: clamp(0.5rem, 2.5vw, 1.25rem);
-  font-weight: 700;
+  font-size: clamp(0.75rem, 0.659rem + 0.45vw, 1rem);
+  font-weight: 500;
   color: white;
   padding: 0;
   margin: 0;
@@ -121,7 +121,7 @@ export const BtnClear = styled.button`
   outline: #5c6bc0;
   border-color: #0d47a1;
   border: none;
-  font-size: clamp(0.5rem, 2.5vw, 1.25rem);
+  font-size: clamp(0.75rem, 0.659rem + 0.45vw, 1rem);
   font-weight: 700;
   color: white;
   padding: 0;
@@ -129,23 +129,17 @@ export const BtnClear = styled.button`
   cursor: pointer;
 `;
 // ********** Products ********************************
-export const FriendsWrap = styled.div`
-  display: flex;
-  width: 100%;
-  height: 100%;
-  background-color: #e8eaf6;
-  padding: 0 0 20px 0;
-  margin: 0;
-`;
+
 export const FriendsList = styled.ul`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  gap: 10px;
   width: 100%;
   height: fit-content;
-  gap: 10px;
-  padding: 8px 0;
+  background-color: #e8eaf6;
+  padding: 20px 0;
   margin: 0;
 `;
 export const ItemWrap = styled.li`

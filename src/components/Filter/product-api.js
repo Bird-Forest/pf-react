@@ -6,7 +6,7 @@ export async function fetchFriends() {
       'https://656383fbee04015769a7535a.mockapi.io/users'
     );
     // const data = response.data;
-    console.log(response.data);
+    // console.log(response.data);
     return response.data;
   } catch (error) {
     console.error(error);

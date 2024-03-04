@@ -55,7 +55,7 @@ export const StyledNavLink = styled(NavLink)`
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 60px;
+  width: 60px;
   color: #64dd17;
   .icon-top-heart {
     width: 34px;
@@ -95,22 +95,23 @@ export const StyledNavLink = styled(NavLink)`
 `;
 
 // ******************** Burger ***************************
-export const CaseBurger = styled.div`
-  display: flex;
-  width: 100%;
-  height: 100vmax;
-  background-color: #ffac33;
-  padding: 0;
-  margin: 0;
-`;
+// export const CaseBurger = styled.div`
+//   display: flex;
+//   width: 100%;
+//   height: 100%;
+//   background-color: #ffac33;
+//   padding: 0;
+//   margin: 0;
+// `;
 export const BurgersWrap = styled.ul`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  gap: 10px;
   width: 100%;
   height: fit-content;
-  gap: 10px;
+  background-color: #ffac33;
   padding: 8px 0;
   margin: 0;
 `;
@@ -207,22 +208,23 @@ export const BurgVeg = styled.h3`
   margin: 0;
 `;
 // ***********   FavoritesList **************************************
-export const CaseFavor = styled.div`
-  display: flex;
-  width: 100%;
-  height: 100vmax;
-  background-color: #ffd180;
-  padding: 0;
-  margin: 0;
-`;
+// export const CaseFavor = styled.div`
+//   display: flex;
+//   width: 100%;
+//   height: 100vmax;
+//   background-color: #ffd180;
+//   padding: 0;
+//   margin: 0;
+// `;
 export const FavoritesWrap = styled.ul`
   display: flex;
   flex-wrap: wrap;
+  gap: 8px;
   justify-content: center;
   /* align-items: center; */
   width: 100%;
   height: fit-content;
-  gap: 8px;
+  background-color: #ffd180;
   padding: 16px 0;
   margin: 0 auto;
 `;
@@ -413,28 +415,30 @@ export const BtDeleteFavor = styled.button`
   }
 `;
 // ****************  BasketList  ***********************
-export const CaseBasket = styled.div`
-  display: flex;
-  width: 100%;
-  height: 100vmax;
-  background-color: #ffd180;
-  padding: 0;
-  margin: 0;
-`;
+// export const CaseBasket = styled.div`
+//   display: flex;
+//   width: 100%;
+//   height: 100vmax;
+
+//   padding: 0;
+//   margin: 0;
+// `;
 export const GoodsWrap = styled.ul`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  gap: 8px;
   width: 100%;
   height: fit-content;
-  gap: 8px;
+  background-color: #ffd180;
   padding: 16px;
   margin: 0;
 `;
 export const BurgerCardOrder = styled.li`
   position: relative;
   display: flex;
+
   justify-content: space-between;
   align-items: center;
   width: 720px;

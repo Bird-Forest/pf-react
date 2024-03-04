@@ -32,17 +32,16 @@ export default function FilterArray({
   const music = getCategories(friends, 'music');
 
   const handleOnChangeFilter = event => {
-    const key = event.target.name;
-    const value = event.target.value;
-    console.log({ [key]: value });
+    // const key = event.target.name;
+    // const value = event.target.value;
+    // console.log({ [key]: value });
     getFilter(event);
-    // filterProducts(key, value);
   };
 
   const handleOnChangeValue = event => {
     const newValue = event.target.value;
     onRange(newValue);
-    console.log(newValue);
+    // console.log(newValue);
   };
 
   return (
@@ -122,7 +121,7 @@ export default function FilterArray({
         <SpanRange id="ranger">{age}</SpanRange>
       </RangeWrap>
       <BtnClear type="button" onClick={clearFilter}>
-        Clear
+        Reset
       </BtnClear>
     </>
   );

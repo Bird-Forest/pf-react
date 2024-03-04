@@ -7,7 +7,6 @@ import {
   FilterMobileWrap,
   FilterWrap,
   FriendsList,
-  FriendsWrap,
 } from './Product.styled';
 import FilterArray from './FilterArray';
 import MobileMenu from 'components/MobileMenu';
@@ -131,14 +130,12 @@ export default function FriendList() {
           </FilterWrap>
         )}
       </FilterBar>
-      <FriendsWrap>
-        <FriendsList>
-          {Arr &&
-            filterArray.map(item => {
-              return <FriendItem key={nanoid()} item={item} />;
-            })}
-        </FriendsList>
-      </FriendsWrap>
+      <FriendsList>
+        {Arr &&
+          filterArray.map(item => {
+            return <FriendItem key={nanoid()} item={item} />;
+          })}
+      </FriendsList>
     </>
   );
 }
