@@ -7,9 +7,9 @@ export const FormikPageWrap = styled.div`
   justify-content: flex-start;
   align-items: center;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-color: #fafafa;
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
 `;
 export const WrapNavSign = styled.nav`
@@ -21,24 +21,25 @@ export const WrapNavSign = styled.nav`
   background-color: #757575;
   gap: 8px;
   width: 100%;
-  height: 60px;
+  /* height: 60px; */
   margin: 0;
   padding: 0;
   .navigate {
     font-family: 'Prompt', sans-serif;
-    font-size: clamp(1rem, 0.724rem + 1.38vw, 1.5rem);
+    font-size: clamp(0.75rem, 0.568rem + 0.91vw, 1.25rem);
     font-weight: 700;
     margin: 0;
     color: #212121;
     text-decoration: none;
     transition: all 0.3s;
     cursor: pointer;
+    padding: 8px 0;
     &.active {
       color: white;
     }
   }
-  @media screen and (min-width: 768px) {
-    min-height: 80px;
+  @media screen and (min-width: 767px) {
+    /* min-height: 80px; */
     gap: 40px;
   }
 `;
@@ -48,7 +49,7 @@ export const WrapFormUp = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  /* gap: 16px; */
   margin: 0;
   .form {
     display: flex;
@@ -56,7 +57,7 @@ export const WrapFormUp = styled.div`
     justify-content: center;
     align-items: center;
     gap: 8px;
-    padding: 20px;
+    padding: 16px;
   }
 `;
 // ******** Auth form **************
@@ -71,13 +72,13 @@ export const AuthForm = styled.div`
   width: 360px;
   height: max-content;
   margin: 0;
-  padding: 0 0 8px 0;
+  padding: 8px;
   .title-auth {
-    font-size: 20px;
+    font-size: 16px;
     text-align: center;
     font-weight: 700;
     color: #616161;
-    padding: 8px;
+    margin-bottom: 4px;
   }
 `;
 export const InputBox = styled.div`
@@ -86,17 +87,16 @@ export const InputBox = styled.div`
   margin: 8px auto 8px auto;
   .input {
     width: 300px;
-    height: 24px;
-    font-size: 16px;
+    height: 20px;
+    font-size: 12px;
     border-radius: 8px;
     border: 2px solid #616161;
     outline: #616161;
-    padding: 8px;
-    margin: 0;
+    padding: 4px 8px;
     &:focus + label,
     &:not(:placeholder-shown) + label {
-      transform: translateY(-28px);
-      font-size: 16px;
+      transform: translateY(-20px);
+      font-size: 12px;
       text-align: center;
       color: #616161;
       outline: #616161;
@@ -108,7 +108,7 @@ export const InputBox = styled.div`
     left: 28px;
     /* transform: translateY(-50%); */
     transform: translateY(-32%);
-    font-size: 16px;
+    font-size: 12px;
     text-align: center;
     color: #616161;
     background-color: white;
@@ -128,34 +128,34 @@ export const SelectFormWrap = styled.div`
   border-radius: 16px;
   border: 2px solid #eeeeee;
   width: 360px;
-  height: 104px;
-  padding: 0 0 8px 0;
+  height: 68px;
+  padding: 8px;
   margin: 0;
   .title-select {
-    font-size: 20px;
+    font-size: 16px;
     text-align: center;
     font-weight: 700;
     color: #616161;
-    padding: 0;
-    margin: 8px 0 8px 0;
+    margin-bottom: 4px;
+    /* padding: 8px; */
   }
   .form-select {
     width: 316px;
-    height: 40px;
-    font-size: 16px;
-    font-weight: 500;
+    height: 36px;
+    font-size: 12px;
+    font-weight: 400;
     color: #616161;
     border-radius: 8px;
     border: 2px solid #616161;
     outline: #616161;
-    padding: 8px;
+    /* padding: 4px 8px; */
     margin: 0;
   }
   .option {
-    font-size: 16px;
+    font-size: 12px;
     color: #616161;
-    border-radius: 8px;
-    outline: #616161;
+    /* border-radius: 8px;
+    outline: #616161; */
   }
 `;
 // *********** Textarea form *************
@@ -168,21 +168,22 @@ export const AreaFormWrap = styled.div`
   border-radius: 16px;
   border: 2px solid #eeeeee;
   width: 360px;
-  height: 192px;
+  /* height: 100px; */
   margin: 0;
+  padding: 8px;
   .title-area {
-    font-size: 20px;
+    font-size: 16px;
     text-align: center;
     font-weight: 700;
     color: #616161;
     padding: 0;
-    margin: 8px 0 8px 0;
+    margin-bottom: 8px;
   }
   .textarea {
     width: 308px;
-    height: 100px;
+    height: 40px;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 400;
     color: #616161;
     border-radius: 8px;
     border: 2px solid #616161;
@@ -194,27 +195,27 @@ export const AreaFormWrap = styled.div`
 // ************  Rating ********************
 export const RatingFormWrap = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
+  gap: 16px;
   background-color: white;
   border-radius: 16px;
   border: 2px solid #eeeeee;
   width: 200px;
-  height: 88px;
-  padding: 0;
+  height: 24px;
+  padding: 8px;
   margin: 0;
   .title-rating {
-    font-size: 20px;
+    font-size: 16px;
     text-align: center;
     font-weight: 700;
     color: #616161;
     padding: 0;
-    margin: 8px 0 8px 0;
+    margin-bottom: 8px;
   }
   .rating {
-    width: 60px;
-    height: 28px;
+    width: 32px;
+    height: 24px;
     font-size: 16px;
     font-weight: 500;
     text-align: center;
@@ -235,16 +236,16 @@ export const CheckboxFormWrap = styled.div`
   background-color: white;
   border-radius: 16px;
   border: 2px solid #eeeeee;
-  width: 360px;
-  height: 48px;
+  width: 300px;
+  height: 20px;
   margin: 0;
-  padding: 0;
+  padding: 8px;
   .title-checkbox {
     display: flex;
     justify-content: ctnter;
     align-items: center;
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 12px;
+    font-weight: 400;
     text-align: center;
     color: #616161;
   }
@@ -271,7 +272,7 @@ export const BtnForm = styled.button`
   border: 1px solid #bdbdbd;
   outline: #bdbdbd;
   width: 360px;
-  height: 48px;
+  height: 40px;
   margin: 0;
   padding: 0;
   cursor: pointer;
@@ -287,7 +288,7 @@ export const ErrorText = styled.div`
   align-items: center;
   text-align: center;
   width: 300px;
-  font-size: 16px;
+  font-size: 12px;
   color: #ff1744;
   padding: 0;
   margin: 0;
@@ -295,33 +296,41 @@ export const ErrorText = styled.div`
 // ***************    MyForm  *****************
 export const MyStyled = styled.div`
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   justify-content: flex-start;
   align-items: center;
-  background-color: white;
-  border-radius: 16px;
-  border: 2px solid #eeeeee;
-  margin: 40px auto;
+  width: 100%;
+  height: 100%;
+  background-color: #fafafa;
+  margin: 0;
+  padding: 0;
+
   .my-form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    padding: 20px;
+    max-width: 300px;
+    background-color: white;
+    border-radius: 16px;
+    border: 2px solid #eeeeee;
+    margin: 8px auto;
+    gap: 4px;
+    padding: 8px;
   }
   .my-title {
-    font-size: 20px;
+    font-size: clamp(0.75rem, 0.659rem + 0.45vw, 1rem);
     text-align: center;
-    font-weight: 700;
+    font-weight: 500;
     color: #616161;
     padding: 0;
-    margin: 8px 0 8px 0;
+    margin: 0;
   }
   .button {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-grow: 1;
     color: white;
     font-size: 16px;
     font-weight: 700;
@@ -329,20 +338,23 @@ export const MyStyled = styled.div`
     border-radius: 16px;
     border: 1px solid #bdbdbd;
     outline: #bdbdbd;
-    width: 300px;
-    height: 48px;
+    /* width: 300px; */
+    height: 40px;
     margin: 0;
-    padding: 0;
+    padding: 0 100px;
     cursor: pointer;
     &:hover,
     :focus {
       background-color: #757575;
     }
+    @media screen and (min-width: 767px) {
+      margin: 8px auto;
+    }
   }
 `;
 export const ErrorMessage = styled.div`
   color: #ff1744;
-  font-size: 16px;
+  font-size: 12px;
 `;
 export const InputWrap = styled.div`
   position: relative;
@@ -351,13 +363,14 @@ export const InputWrap = styled.div`
   padding: 0;
   margin: 8px auto 8px auto;
   .my-input {
-    width: 300px;
-    height: 24px;
+    display: flex;
+    flex-grow: 1;
+    /* height: 20px; */
     font-size: 16px;
     border-radius: 8px;
     border: 2px solid #616161;
     outline: #616161;
-    padding: 8px;
+    padding: 4px 8px;
     margin: 0;
   }
   .my-input.error {
@@ -367,7 +380,7 @@ export const InputWrap = styled.div`
     position: absolute;
     top: -24%;
     left: 28px;
-    font-size: 16px;
+    font-size: 12px;
     text-align: center;
     color: #616161;
     background-color: white;
@@ -380,13 +393,14 @@ export const InputWrap = styled.div`
     color: #ff1744;
   }
   .my-password {
-    width: 300px;
-    height: 24px;
+    display: flex;
+    flex-grow: 1;
+    /* height: 20px; */
     font-size: 16px;
     border-radius: 8px;
     border: 2px solid #616161;
     outline: #616161;
-    padding: 8px;
+    padding: 4px 8px;
     margin: 0;
   }
   .my-password.error {
@@ -412,38 +426,40 @@ export const SelectWrap = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 360px;
-  height: 80px;
-  padding: 0 0 8px 0;
-  margin: 0;
+  /* width: 360px; */
+  max-width: 400px;
+  /* height: 80px; */
+  padding: 0;
+
   .label-select {
-    font-size: 20px;
+    font-size: clamp(0.75rem, 0.659rem + 0.45vw, 1rem);
     text-align: center;
-    font-weight: 700;
-    color: #616161;
-    padding: 0;
-    margin: 8px 0 8px 0;
-  }
-  .my-select {
-    width: 316px;
-    height: 40px;
-    font-size: 16px;
     font-weight: 500;
     color: #616161;
+    padding: 0;
+    margin: 0 0 8px 0;
+  }
+  .my-select {
+    box-sizing: border-box;
+    display: flex;
+    flex-grow: 1;
+    font-size: 16px;
     border-radius: 8px;
     border: 2px solid #616161;
     outline: #616161;
-    padding: 8px;
+    padding: 4px 12px;
     margin: 0;
   }
   .my-select.error {
     border: 2px solid #ff1744;
   }
+  .default {
+  }
   .my-option {
     font-size: 16px;
     color: #616161;
-    border-radius: 8px;
-    outline: #616161;
+    padding: 0;
+    margin: 0;
   }
 `;
 export const TextareaWrap = styled.div`
@@ -451,20 +467,24 @@ export const TextareaWrap = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 360px;
-  height: 160px;
+  /* width: 360px; */
+  max-width: 400px;
+  /* height: 100px; */
   margin: 0;
   .label-textarea {
-    font-size: 20px;
+    font-size: clamp(0.75rem, 0.659rem + 0.45vw, 1rem);
     text-align: center;
-    font-weight: 700;
+    font-weight: 500;
     color: #616161;
     padding: 0;
-    margin: 8px 0 8px 0;
+    margin: 0 0 8px 0;
   }
   .my-textarea {
-    width: 308px;
-    height: 100px;
+    display: flex;
+    /* width: 308px; */
+    display: flex;
+    flex-grow: 1;
+    /* height: 100px; */
     font-size: 16px;
     font-weight: 500;
     color: #616161;
@@ -483,17 +503,15 @@ export const RatingWrap = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 200px;
-  height: 88px;
   padding: 0;
   margin: 0;
   .label-rating {
-    font-size: 20px;
+    font-size: clamp(0.75rem, 0.659rem + 0.45vw, 1rem);
     text-align: center;
-    font-weight: 700;
+    font-weight: 500;
     color: #616161;
     padding: 0;
-    margin: 8px 0 8px 0;
+    margin: 0 0 8px 0;
   }
   .my-rating {
     width: 60px;
@@ -517,8 +535,9 @@ export const CheckboxWrap = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 360px;
-  height: 48px;
+  flex-grow: 1;
+  /* width: 360px; */
+  height: 28px;
   margin: 0;
   padding: 0;
   .my-checkbox {
@@ -534,11 +553,11 @@ export const CheckboxWrap = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 12px;
+    font-weight: 400;
     text-align: center;
     color: #616161;
-    margin: 0 8px 0 8px;
+    margin: 0;
   }
   .label-checkbox::before {
     /* z-index: 1; */

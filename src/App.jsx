@@ -1,3 +1,5 @@
+import { Container } from 'pages/Page.styled';
+import SideBar from 'pages/SideBar';
 import React, { lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
 const SharedLayout = lazy(() => import('pages/SharedLayout'));
@@ -16,7 +18,8 @@ const BasketList = lazy(() => import('./components/Basket/BasketList'));
 
 export default function App() {
   return (
-    <>
+    <Container>
+      <SideBar />
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<HomePage />} />
@@ -35,6 +38,6 @@ export default function App() {
           </Route>
         </Route>
       </Routes>
-    </>
+    </Container>
   );
 }

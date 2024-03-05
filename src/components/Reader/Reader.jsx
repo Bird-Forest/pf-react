@@ -12,7 +12,6 @@ import {
   ReaderWrap,
   TextReaderWrap,
 } from './Reader.styled';
-import MobileMenu from 'components/MobileMenu';
 
 const LS_KEY = 'reader_item_index';
 
@@ -38,7 +37,6 @@ export default function Reader({ items, onChangeTheme }) {
   return (
     <ReaderWrap>
       <BtnReaderWrap>
-        <MobileMenu />
         <BtnLeft disabled={index === 1} onClick={() => onChangeValue(-1)}>
           <FaArrowLeft className="icon-arrow" />
         </BtnLeft>

@@ -10,13 +10,11 @@ const burgers = data;
 export default function ShowcaseBurgers() {
   const Arr = Array.isArray(burgers) && burgers.length > 0;
   return (
-    // <CaseBurger>
     <BurgersWrap>
       {Arr &&
         burgers.map(item => {
           return <Burger key={nanoid()} item={item} />;
         })}
     </BurgersWrap>
-    // </CaseBurger>
   );
 }

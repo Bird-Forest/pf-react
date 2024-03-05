@@ -9,7 +9,7 @@ export const FilterBar = styled.div`
   background-color: #0d47a1;
   padding: 0;
   margin: 0;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 844px) {
     height: 60px;
   }
 `;
@@ -25,7 +25,7 @@ export const BtnFilter = styled.div`
   margin: 12px 0 8px 0;
   cursor: pointer;
   padding: 0;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 844px) {
     display: none;
   }
 `;
@@ -45,7 +45,7 @@ export const FilterMobileWrap = styled.div`
   /* margin: 0; */
 `;
 export const FilterWrap = styled.div`
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 844px) {
     position: relative;
     top: 0;
     left: 0;

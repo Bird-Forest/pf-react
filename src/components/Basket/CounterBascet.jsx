@@ -1,42 +1,39 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import {
-  BtnAdd,
-  BtnDash,
+  BurgPriceOrder,
   CountBasketWrap,
   CounterOrder,
   InTotalItem,
 } from './Burger.styled';
-import { BsCartDashFill, BsCartPlusFill } from 'react-icons/bs';
-// import { BasketContext } from './ProductProvider';
+import { FiMinus, FiPlus } from 'react-icons/fi';
 
-export default function CounterBasket({ item, calculateTotal }) {
+export default function CounterBasket({ item }) {
   const [count, setCount] = useState(1);
-  const [total, setTotal] = useState(0);
-  // const [result, setResult] = useState(item.price);
-  // let total = Number(item.price * count).toFixed(2);
   const handleIncrement = () => {
-    setCount(prevState => prevState + 1);
+    setCount(count + 1);
   };
   const handleDecrement = () => {
-    setCount(prevState => prevState - 1);
+    setCount(count - 1);
   };
-  //  total = Number(item.price * count).toFixed(2);
-  useEffect(() => {
-    setTotal(() => (item.price * count).toFixed(2));
-    calculateTotal(total);
-  }, [count, item.price, total, calculateTotal]);
 
-  // let result = (item.price * count).toFixed(2);
   return (
     <CountBasketWrap>
-      <BtnAdd onClick={handleIncrement}>
-        <BsCartPlusFill className="icon-add-order" />
-      </BtnAdd>
+      <div className="wrap-btn">
+        <button className="btn-counter" onClick={handleIncrement}>
+          <FiPlus className="icon-count" />
+        </button>
+        <button
+          className="btn-counter"
+          type="button"
+          disabled={count === 1}
+          onClick={handleDecrement}
+        >
+          <FiMinus className="icon-count" />
+        </button>
+      </div>
       <CounterOrder>{count}</CounterOrder>
-      <BtnDash type="button" disabled={count === 1} onClick={handleDecrement}>
-        <BsCartDashFill className="icon-delete-order" />
-      </BtnDash>
-      <InTotalItem>{total}</InTotalItem>
+      <BurgPriceOrder>{item.price.toFixed(2)}</BurgPriceOrder>
+      <InTotalItem>{(item.price.toFixed(2) * count).toFixed(2)}</InTotalItem>
     </CountBasketWrap>
   );
 }

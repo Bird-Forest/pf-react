@@ -49,7 +49,6 @@ export default function FavoritesList() {
 
   const Arr = Array.isArray(likes) && likes.length > 0;
   return (
-    // <CaseFavor>
     <FavoritesWrap>
       {Arr &&
         likes.map(item => {
@@ -100,6 +99,5 @@ export default function FavoritesList() {
           );
         })}
     </FavoritesWrap>
-    // </CaseFavor>
   );
 }

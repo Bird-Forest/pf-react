@@ -9,7 +9,6 @@ import {
   FriendsList,
 } from './Product.styled';
 import FilterArray from './FilterArray';
-import MobileMenu from 'components/MobileMenu';
 import WindowWidth from 'components/WindowWidth';
 import FriendItem from './FriendItem';
 import { nanoid } from '@reduxjs/toolkit';
@@ -98,9 +97,8 @@ export default function FriendList() {
     <>
       <FilterBar>
         {isLoading && <Loading />}
-        <MobileMenu />
         <BtnFilter onClick={() => setIsHidden(!isHidden)}>Filters</BtnFilter>
-        {widthVuport < 768 ? (
+        {widthVuport < 767 ? (
           !isHidden && (
             <FilterMobileWrap
               style={{

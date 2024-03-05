@@ -424,36 +424,44 @@ export const BtDeleteFavor = styled.button`
 //   margin: 0;
 // `;
 export const GoodsWrap = styled.ul`
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   gap: 8px;
   width: 100%;
-  height: fit-content;
+  height: 100%;
   background-color: #ffd180;
-  padding: 16px;
+  padding: 8px;
   margin: 0;
 `;
 export const BurgerCardOrder = styled.li`
-  position: relative;
+  /* position: relative; */
   display: flex;
-
   justify-content: space-between;
   align-items: center;
-  width: 720px;
+  gap: 8px;
+  /* width: 100%; */
+  width: 80vw;
+  /* margin: 0 10vw; */
   height: max-content;
   background-color: white;
   border-radius: 8px;
   padding: 0 16px;
   margin: 0;
+  /* @media screen and (min-width: 844px) {
+    width: 80px;
+  } */
 `;
 export const InfoBasketWrap = styled.div`
   display: flex;
-  width: 460px;
+  width: 100px;
   justify-content: flex-start;
   align-items: center;
+  gap: 8px;
   margin: 0;
+  padding: 0;
 `;
 export const BtDeleteOrder = styled.button`
   display: flex;
@@ -462,11 +470,11 @@ export const BtDeleteOrder = styled.button`
   background-color: white;
   border: none;
   cursor: pointer;
-  margin: 0 8px 0 0;
+  margin: 0;
   padding: 0;
   .icon-delete-favor {
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
     fill: #ff9800;
   }
   .icon-delete-favor:hover,
@@ -476,60 +484,70 @@ export const BtDeleteOrder = styled.button`
 `;
 export const BurgImgOrder = styled.img`
   display: block;
-  width: 72px;
-  height: 72px;
+  width: 52px;
+  height: 52px;
   object-fit: content;
   padding: 0;
-  margin: 0 8px 0 0;
+  margin: 0;
 `;
 export const BurgNameOrder = styled.h2`
-  display: block;
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-start;
+  align-items: center;
   text-align: start;
   font-size: clamp(12px, 0.568rem + 0.91vw, 20px);
   font-weight: 700;
   color: #754a08;
   padding: 0;
-  margin: 0 0 0 0;
+  margin: 0;
 `;
 
 export const CountBasketWrap = styled.div`
   display: flex;
-  width: 266px;
+  width: 160px;
   justify-content: flex-end;
   align-items: center;
+  gap: 4px;
   margin: 0;
+  .wrap-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+  }
+  .btn-counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 28px;
+    height: 14px;
+    border: 2px solid #ff9800;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+  }
+  .icon-count {
+    width: 12px;
+    stroke: #754a08;
+  }
 `;
 export const BurgPriceOrder = styled.p`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 44px;
+  width: 40px;
   height: 32px;
   font-size: clamp(8px, 0.318rem + 0.91vw, 16px);
   color: #754a08;
   border-radius: 8px;
   border: 2px solid #ff9800;
   padding: 0;
-  margin: 0 0 0 4px;
-`;
-export const BtnAdd = styled.button`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  margin: 0 0 0 4px;
-  .icon-add-order {
-    width: 32px;
-    height: 32px;
-    fill: #ff9800;
-  }
-  .icon-add-order:hover,
-  .icon-add-order:focus {
-    fill: #e65100;
-  }
+  margin: 0;
 `;
 export const CounterOrder = styled.span`
   display: flex;
@@ -542,39 +560,20 @@ export const CounterOrder = styled.span`
   border-radius: 8px;
   border: 2px solid #ff9800;
   padding: 0;
-  margin: 0 0 0 4px;
-`;
-export const BtnDash = styled.button`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  margin: 0 0 0 4px;
-  .icon-delete-order {
-    width: 32px;
-    height: 32px;
-    fill: #ff9800;
-  }
-  .icon-delete-order:hover,
-  .icon-delete-order:focus {
-    fill: #e65100;
-  }
+  margin: 0;
 `;
 export const InTotalItem = styled.span`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 92px;
+  width: 60px;
   height: 32px;
   font-size: clamp(8px, 0.318rem + 0.91vw, 16px);
   color: #754a08;
   border-radius: 8px;
   border: 2px solid #ff9800;
   padding: 0;
-  margin: 0 0 0 8px;
+  margin: 0;
 `;
 export const CostOfGoods = styled.div`
   display: flex;

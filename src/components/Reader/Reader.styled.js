@@ -20,7 +20,7 @@ export const BtnReaderWrap = styled.div`
   height: 60px;
   padding: 0;
   margin-bottom: 16px;
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 844px) {
     height: 80px;
     padding: 16px 0;
   }
