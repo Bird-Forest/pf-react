@@ -151,8 +151,11 @@ export const FriendsList = styled.ul`
   background-color: #e8eaf6;
   width: 100%;
   height: fit-content;
-  padding: 60px 0 20px 0;
-  margin: 0;
+  padding: 8px 0 20px 0;
+  margin: 28px 0;
+  @media screen and (min-width: 767px) {
+    padding: 28px 0 20px 0;
+  }
 `;
 export const ItemWrap = styled.li`
   display: flex;
