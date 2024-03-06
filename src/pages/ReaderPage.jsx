@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import publications from '../components/Reader/publications.json';
 import Reader from 'components/Reader/Reader';
 import { ThemeProvider } from 'styled-components';
+import { WrapRight } from './Page.styled';
 
 export const darkTheme = {
   body: '#9575cd',
@@ -25,7 +26,9 @@ export default function ReaderPage() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Reader items={publications} onChangeTheme={handleClick} />
+      <WrapRight>
+        <Reader items={publications} onChangeTheme={handleClick} />
+      </WrapRight>
     </ThemeProvider>
   );
 }

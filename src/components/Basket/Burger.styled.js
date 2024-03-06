@@ -1,13 +1,12 @@
-import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const BasketPageWrap = styled.div`
   display: block;
   width: 100%;
-  height: 100vmax;
+  height: 100vh;
   background-color: #ffe082;
   background-image: url(${'https://catherineasquithgallery.com/uploads/posts/2021-03/1614857877_175-p-kulinarnii-fon-242.jpg'});
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   margin: 0 auto;
   padding: 0;
@@ -16,93 +15,145 @@ export const BasketPageWrap = styled.div`
 export const NavigateBasket = styled.div`
   top: 0;
   right: 0;
+  position: fixed;
+  z-index: 1;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
-  gap: 8px;
-  width: 100%;
+  width: 100vw;
   background-color: #754a08;
   padding: 0;
   margin: 0;
-  .burgers {
-    font-family: 'Prompt', sans-serif;
-    font-size: clamp(1rem, 0.724rem + 1.38vw, 1.5rem);
-    font-weight: 700;
-    color: #64dd17;
-    text-decoration: none;
-    transition: all 0.3s;
-    padding: 0;
-    margin: 8px auto 8px 40px;
-    &.active {
-      color: #ff9800;
-    }
-  }
-  .home {
-    font-family: 'Prompt', sans-serif;
-    font-size: clamp(1rem, 0.724rem + 1.38vw, 1.5rem);
-    font-weight: 700;
-    color: #64dd17;
-    text-decoration: none;
-    transition: all 0.3s;
-    padding: 0;
-    margin: 8px auto 8px 40px;
-    &.active {
-      color: #ff9800;
-    }
+  @media screen and (min-width: 767px) {
+    width: 85vw;
   }
 `;
-export const StyledNavLink = styled(NavLink)`
+export const WrapNavPage = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60px;
-  color: #64dd17;
-  .icon-top-heart {
-    width: 34px;
-    height: 34px;
-    fill: #64dd17;
+  gap: 16px;
+  padding: 8px 0;
+  margin: 0 0 0 60px;
+  .home {
+    font-family: 'Prompt', sans-serif;
+    font-size: clamp(0.75rem, 0.568rem + 0.91vw, 1.25rem);
+    font-weight: 700;
+    color: #64dd17;
+    text-decoration: none;
+    transition: all 0.3s;
     padding: 0;
-    margin: 10px 40px 6px 0;
+    margin: 0 4px 0 4px;
+    &.active {
+      color: #ff9800;
+    }
   }
-  &.active > .icon-top-heart {
-    fill: #ff9800;
-  }
-  .icon-top-basket {
-    width: 34px;
-    height: 34px;
-    fill: #64dd17;
+  .burgers {
+    font-family: 'Prompt', sans-serif;
+    font-size: clamp(0.75rem, 0.568rem + 0.91vw, 1.25rem);
+    font-weight: 700;
+    color: #64dd17;
+    text-decoration: none;
+    transition: all 0.3s;
     padding: 0;
-    margin: 8px 40px 8px 0;
+    margin: 0 12px 0 0;
+    &.active {
+      color: #ff9800;
+    }
   }
-  &.active > .icon-top-basket {
-    fill: #ff9800;
+  @media screen and (min-width: 767px) {
+    gap: 0;
+    .home {
+      margin: 0 0 0 60px;
+    }
+    .burgers {
+      margin: 0 0 0 60px;
+    }
+  }
+`;
+export const WrapCustomPage = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  padding: 0;
+  margin: 0 16px 0 0;
+  .like {
+    width: 18px;
+    height: 18px;
+    color: #64dd17;
+    transition: all 0.3s;
+
+    &.active {
+      color: #ff9800;
+    }
+    .icon-top-heart {
+      fill: currentColor;
+    }
+  }
+  .good {
+    width: 18px;
+    height: 18px;
+    color: #64dd17;
+    transition: all 0.3s;
+    &.active {
+      color: #ff9800;
+    }
+    .icon-top-basket {
+      fill: currentColor;
+    }
   }
   .count {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 32px;
-    height: 32px;
-    font-size: clamp(1rem, 0.724rem + 1.38vw, 1.5rem);
+    width: 16px;
+    height: 16px;
+    font-size: 12px;
     font-weight: 700;
     text-decoration: none;
     color: #ff9800;
     border-radius: 8px;
     border: 2px solid #ff9800;
     padding: 0;
-    margin: 0 0 0 4px;
+    margin: 0;
+  }
+  @media screen and (min-width: 767px) {
+    gap: 0;
+
+    .like {
+      margin: 0 20px 4px 0;
+      .icon-top-heart {
+        width: 24px;
+        height: 24px;
+      }
+    }
+    .good {
+      margin: 0 20px 8px 0;
+      .icon-top-basket {
+        width: 24px;
+        height: 24px;
+      }
+    }
+    .count {
+      width: 24px;
+      height: 24px;
+      margin: 0 8px 0 0;
+    }
   }
 `;
-
 // ******************** Burger ***************************
-// export const CaseBurger = styled.div`
-//   display: flex;
-//   width: 100%;
-//   height: 100%;
-//   background-color: #ffac33;
-//   padding: 0;
-//   margin: 0;
-// `;
+export const CaseBurger = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #ffac33;
+  padding: 0;
+  margin: 0;
+`;
 export const BurgersWrap = styled.ul`
   display: flex;
   flex-wrap: wrap;
@@ -113,7 +164,7 @@ export const BurgersWrap = styled.ul`
   height: fit-content;
   background-color: #ffac33;
   padding: 8px 0;
-  margin: 0;
+  margin: 36px 0;
 `;
 export const BurgWrap = styled.li`
   position: relative;
@@ -221,33 +272,32 @@ export const FavoritesWrap = styled.ul`
   flex-wrap: wrap;
   gap: 8px;
   justify-content: center;
-  /* align-items: center; */
   width: 100%;
   height: fit-content;
   background-color: #ffd180;
   padding: 16px 0;
-  margin: 0 auto;
+  margin: 28px 0 0 0;
 `;
-export const BurgerCard = styled.li`
+export const WrapBurgerCard = styled.li`
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: 596px;
-  height: max-content;
+  align-items: center;
+  gap: 4px;
+  width: 280px;
+  height: 560px;
   background-color: white;
   border-radius: 10px;
-  padding: 0;
+  padding: 16px 8px;
   margin: 0;
 `;
 export const BurgNameCard = styled.h2`
-  position: relative;
-  top: 12px;
-  left: 16px;
-  display: inline-block;
-  width: 580px;
-  height: 28px;
-  text-align: start;
+  position: absolute;
+  top: 10px;
+  width: 280px;
+  height: 40px;
+  text-align: center;
   font-size: clamp(12px, 0.568rem + 0.91vw, 20px);
   font-weight: 700;
   color: #754a08;
@@ -255,64 +305,65 @@ export const BurgNameCard = styled.h2`
   margin: 0;
 `;
 export const BurgImgWrap = styled.div`
-  position: relative;
-  top: 16px;
-  left: 8px;
-  right: 8px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 580px;
-  height: 140px;
+  width: 280px;
   padding: 0;
-  margin: 0;
+  margin: 16px 0 0 0;
 `;
 export const BurgImgCard = styled.img`
   display: block;
-  width: 140px;
+  width: 160px;
   height: 140px;
   object-fit: content;
   padding: 0;
   margin: 0;
 `;
-export const BurgDescrCard = styled.p`
-  display: inline-block;
-  font-size: clamp(8px, 0.409rem + 0.45vw, 12px);
+export const BurgDescrCard = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-grow: 1;
+  width: 280px;
   padding: 0;
   margin: 0;
   color: #754a08;
+  .descript {
+    width: 280px;
+    height: 60px;
+    font-size: clamp(8px, 0.409rem + 0.45vw, 12px);
+    text-align: left;
+    white-space: wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
   .title-desc {
+    width: 280px;
+    height: 16px;
     font-size: clamp(8px, 0.318rem + 0.91vw, 16px);
     font-weight: 700;
-    color: #754a08;
   }
 `;
 export const BurgIngrTitle = styled.h3`
-  position: relative;
-  top: 16px;
-  left: 16px;
-  display: inline-block;
   font-size: clamp(12px, 0.568rem + 0.91vw, 20px);
   font-weight: 500;
   color: #754a08;
-  width: 580px;
-  height: 32px;
+  width: 280px;
+  height: 24px;
   padding: 0;
   margin: 0;
 `;
 export const BurgIngrWrap = styled.ul`
-  position: relative;
-  top: 16px;
-  left: 0;
-  right: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 4px;
-  width: 596px;
-  height: auto;
+  width: 288px;
+  height: 266px;
   padding: 0;
   margin: 0;
 `;
@@ -344,33 +395,32 @@ export const BurgIngrName = styled.p`
   margin: 0;
 `;
 export const BurgInfoWrap = styled.div`
-  position: relative;
-  top: 8px;
-  left: 8px;
-  right: 8px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  width: 580px;
-  height: 76px;
+  gap: 8px;
+  width: 280px;
+  height: 28px;
   margin: 0;
   padding: 0;
 `;
 export const BurgVegCard = styled.h3`
-  display: inline-block;
+  display: flex;
+  flex-basis: 88px;
   font-size: clamp(8px, 0.318rem + 0.91vw, 16px);
   font-weight: 700;
   color: #754a08;
   padding: 0;
-  margin: 0 24px;
+  margin: 0;
 `;
 export const BurgPriceCard = styled.h3`
-  display: inline-block;
+  display: flex;
+  flex-basis: 88px;
   font-size: clamp(8px, 0.318rem + 0.91vw, 16px);
   font-weight: 700;
   color: #754a08;
   padding: 0;
-  margin: 0 200px 0 0;
+  margin: 0;
 `;
 export const BtBasketFavor = styled.button`
   display: flex;
@@ -379,11 +429,11 @@ export const BtBasketFavor = styled.button`
   background-color: white;
   border: none;
   cursor: pointer;
-  margin: 0 40px 0 0;
+  margin: 0 16px 0 0;
   padding: 0;
   .icon-basket-favor {
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
     fill: #ff9800;
   }
   .icon-basket-favor:hover,
@@ -398,15 +448,15 @@ export const BtDeleteFavor = styled.button`
   background-color: white;
   border: none;
   cursor: pointer;
-  margin: 0 24px 0 0;
+  margin: 0;
   padding: 0;
   &:hover,
   &:focus {
     color: #e65100;
   }
   .icon-delete-favor {
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
     fill: #ff9800;
   }
   .icon-delete-favor:hover,
@@ -431,13 +481,12 @@ export const GoodsWrap = styled.ul`
   align-items: center;
   gap: 8px;
   width: 100%;
-  height: 100%;
+  height: fit-content;
   background-color: #ffd180;
   padding: 8px;
-  margin: 0;
+  margin: 36px 0 0 0;
 `;
 export const BurgerCardOrder = styled.li`
-  /* position: relative; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -450,9 +499,6 @@ export const BurgerCardOrder = styled.li`
   border-radius: 8px;
   padding: 0 16px;
   margin: 0;
-  /* @media screen and (min-width: 844px) {
-    width: 80px;
-  } */
 `;
 export const InfoBasketWrap = styled.div`
   display: flex;

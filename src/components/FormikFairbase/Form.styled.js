@@ -3,25 +3,25 @@ import myAgree from '../../img/3check.png';
 
 export const FormikPageWrap = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   width: 100%;
   height: 100vh;
   background-color: #fafafa;
-  margin: 0;
-  padding: 0;
+  /* margin: 40px 0; */
+  /* padding: 8vh 0 0 0; */
 `;
 export const WrapNavSign = styled.nav`
   top: 0;
   right: 0;
+  position: fixed;
+  z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #757575;
   gap: 8px;
   width: 100%;
-  /* height: 60px; */
   margin: 0;
   padding: 0;
   .navigate {
@@ -39,25 +39,29 @@ export const WrapNavSign = styled.nav`
     }
   }
   @media screen and (min-width: 767px) {
-    /* min-height: 80px; */
-    gap: 40px;
+    gap: 20px;
+    width: 85vw;
+    padding-left: 15vw;
   }
 `;
 // *******  All form **************
 export const WrapFormUp = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  /* gap: 16px; */
+  /* width: 100%;
+  height: fit-content;
+  background-color: #fafafa;
   margin: 0;
+  padding: 24px 0 0 0; */
   .form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 8px;
-    padding: 16px;
+    padding: 0;
   }
 `;
 // ******** Auth form **************
@@ -106,7 +110,6 @@ export const InputBox = styled.div`
     position: absolute;
     top: 32%;
     left: 28px;
-    /* transform: translateY(-50%); */
     transform: translateY(-32%);
     font-size: 12px;
     text-align: center;
@@ -137,7 +140,6 @@ export const SelectFormWrap = styled.div`
     font-weight: 700;
     color: #616161;
     margin-bottom: 4px;
-    /* padding: 8px; */
   }
   .form-select {
     width: 316px;
@@ -148,14 +150,12 @@ export const SelectFormWrap = styled.div`
     border-radius: 8px;
     border: 2px solid #616161;
     outline: #616161;
-    /* padding: 4px 8px; */
+
     margin: 0;
   }
   .option {
     font-size: 12px;
     color: #616161;
-    /* border-radius: 8px;
-    outline: #616161; */
   }
 `;
 // *********** Textarea form *************
@@ -168,7 +168,7 @@ export const AreaFormWrap = styled.div`
   border-radius: 16px;
   border: 2px solid #eeeeee;
   width: 360px;
-  /* height: 100px; */
+
   margin: 0;
   padding: 8px;
   .title-area {
@@ -296,7 +296,6 @@ export const ErrorText = styled.div`
 // ***************    MyForm  *****************
 export const MyStyled = styled.div`
   display: flex;
-  /* flex-direction: column; */
   justify-content: flex-start;
   align-items: center;
   width: 100%;
@@ -321,7 +320,7 @@ export const MyStyled = styled.div`
   .my-title {
     font-size: clamp(0.75rem, 0.659rem + 0.45vw, 1rem);
     text-align: center;
-    font-weight: 500;
+    font-weight: 700;
     color: #616161;
     padding: 0;
     margin: 0;
@@ -338,7 +337,6 @@ export const MyStyled = styled.div`
     border-radius: 16px;
     border: 1px solid #bdbdbd;
     outline: #bdbdbd;
-    /* width: 300px; */
     height: 40px;
     margin: 0;
     padding: 0 100px;
@@ -380,7 +378,7 @@ export const InputWrap = styled.div`
     position: absolute;
     top: -24%;
     left: 28px;
-    font-size: 12px;
+    font-size: 14px;
     text-align: center;
     color: #616161;
     background-color: white;
@@ -434,7 +432,7 @@ export const SelectWrap = styled.div`
   .label-select {
     font-size: clamp(0.75rem, 0.659rem + 0.45vw, 1rem);
     text-align: center;
-    font-weight: 500;
+    font-weight: 700;
     color: #616161;
     padding: 0;
     margin: 0 0 8px 0;
@@ -443,7 +441,7 @@ export const SelectWrap = styled.div`
     box-sizing: border-box;
     display: flex;
     flex-grow: 1;
-    font-size: 16px;
+    font-size: 14px;
     border-radius: 8px;
     border: 2px solid #616161;
     outline: #616161;
@@ -456,7 +454,7 @@ export const SelectWrap = styled.div`
   .default {
   }
   .my-option {
-    font-size: 16px;
+    font-size: 14px;
     color: #616161;
     padding: 0;
     margin: 0;
@@ -474,7 +472,7 @@ export const TextareaWrap = styled.div`
   .label-textarea {
     font-size: clamp(0.75rem, 0.659rem + 0.45vw, 1rem);
     text-align: center;
-    font-weight: 500;
+    font-weight: 700;
     color: #616161;
     padding: 0;
     margin: 0 0 8px 0;
@@ -485,7 +483,7 @@ export const TextareaWrap = styled.div`
     display: flex;
     flex-grow: 1;
     /* height: 100px; */
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
     color: #616161;
     border-radius: 8px;
@@ -500,23 +498,24 @@ export const TextareaWrap = styled.div`
 `;
 export const RatingWrap = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  /* flex-direction: column; */
+  justify-content: center;
   align-items: center;
+  gap: 16px;
   padding: 0;
   margin: 0;
   .label-rating {
     font-size: clamp(0.75rem, 0.659rem + 0.45vw, 1rem);
     text-align: center;
-    font-weight: 500;
+    font-weight: 700;
     color: #616161;
     padding: 0;
-    margin: 0 0 8px 0;
+    margin: 4px 0;
   }
   .my-rating {
-    width: 60px;
-    height: 28px;
-    font-size: 16px;
+    width: 40px;
+    height: 20px;
+    font-size: 14px;
     font-weight: 500;
     text-align: center;
     color: #616161;
@@ -536,7 +535,7 @@ export const CheckboxWrap = styled.div`
   justify-content: center;
   align-items: center;
   flex-grow: 1;
-  /* width: 360px; */
+  width: 360px;
   height: 28px;
   margin: 0;
   padding: 0;

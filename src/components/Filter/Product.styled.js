@@ -1,37 +1,33 @@
 import styled from 'styled-components';
-// *************** Filters ************************
-export const FilterBar = styled.div`
-  top: 0;
-  right: 0;
+
+export const WpapFilterPage = styled.div`
   display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #e8eaf6;
   width: 100%;
-  height: 44px;
-  background-color: #0d47a1;
-  padding: 0;
-  margin: 0;
-  @media screen and (min-width: 844px) {
-    height: 60px;
-  }
+  height: 100vh;
 `;
+// *************** Filters mobile ************************
 export const BtnFilter = styled.div`
   display: block;
   width: 60px;
-  height: 40px;
-  font-size: 16px;
-  font-weight: 500;
-  text-align: left;
+  /* height: 24px; */
+  font-size: clamp(0.75rem, 0.568rem + 0.91vw, 1.25rem);
+  font-weight: 700;
+  text-align: center;
   color: white;
-  padding: 0;
-  margin: 12px 0 8px 0;
   cursor: pointer;
-  padding: 0;
-  @media screen and (min-width: 844px) {
+  padding: 8px 0;
+  margin: 0;
+  @media screen and (min-width: 767px) {
     display: none;
   }
 `;
 export const FilterMobileWrap = styled.div`
   position: absolute;
-  top: 44px;
+  top: 30px;
   left: 0;
   width: 100%;
   height: fit-content;
@@ -40,25 +36,35 @@ export const FilterMobileWrap = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  gap: 8px;
-  padding: 8px;
+  gap: 16px;
+  padding: 18px;
   /* margin: 0; */
 `;
+// ************ Filer Decktop ************
+export const FilterBar = styled.div`
+  top: 0;
+  right: 0;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  background-color: #0d47a1;
+  padding: 0;
+  margin: 0;
+  @media screen and (min-width: 767px) {
+    width: 85vw;
+  }
+`;
 export const FilterWrap = styled.div`
-  @media screen and (min-width: 844px) {
-    position: relative;
-    top: 0;
-    left: 0;
+  @media screen and (min-width: 767px) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    background-color: #0d47a1;
     width: 100%;
-    height: 60px;
-    gap: 4px;
-    padding: 4px;
-    margin: 0;
+    padding: 4px 0;
+    margin: 0 0 0 4px;
   }
 `;
 export const FilterForm = styled.form`
@@ -68,21 +74,27 @@ export const FilterForm = styled.form`
 `;
 export const SelectForm = styled.select`
   display: flex;
-  width: 84px;
-  height: 40px;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
   font-size: clamp(0.75rem, 0.659rem + 0.45vw, 1rem);
-  font-weight: 500;
+  font-weight: 400;
   color: white;
   background-color: #0d47a1;
-  border-color: #0d47a1;
-  text-align: left;
+  border: 1px solid white;
+  border-radius: 4px;
+  text-align: center;
   outline: #0d47a1;
   padding: 0;
   margin: 0;
   cursor: pointer;
 `;
 export const OptionForm = styled.option`
-  font-size: clamp(0.75rem, 0.659rem + 0.45vw, 1rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
   font-weight: 400;
 `;
 export const RangeWrap = styled.div`
@@ -95,13 +107,13 @@ export const RangeWrap = styled.div`
 `;
 export const LabelRange = styled.label`
   font-size: clamp(0.75rem, 0.659rem + 0.45vw, 1rem);
-  font-weight: 500;
+  font-weight: 400;
   color: white;
   padding: 0;
   margin: 0;
 `;
 export const InputRange = styled.input`
-  width: 120px;
+  width: 100px;
   height: 40px;
   padding: 0;
   margin: 0;
@@ -109,20 +121,20 @@ export const InputRange = styled.input`
 export const SpanRange = styled.span`
   text-align: left;
   font-size: clamp(0.75rem, 0.659rem + 0.45vw, 1rem);
-  font-weight: 500;
+  font-weight: 400;
   color: white;
   padding: 0;
   margin: 0;
 `;
 export const BtnClear = styled.button`
   width: 60px;
-  height: 40px;
+  height: 20px;
   background-color: #0d47a1;
+  border: 1px solid white;
+  border-radius: 4px;
   outline: #5c6bc0;
-  border-color: #0d47a1;
-  border: none;
-  font-size: clamp(0.75rem, 0.659rem + 0.45vw, 1rem);
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 400;
   color: white;
   padding: 0;
   margin: 0;
@@ -136,10 +148,10 @@ export const FriendsList = styled.ul`
   justify-content: center;
   align-items: center;
   gap: 10px;
+  background-color: #e8eaf6;
   width: 100%;
   height: fit-content;
-  background-color: #e8eaf6;
-  padding: 20px 0;
+  padding: 60px 0 20px 0;
   margin: 0;
 `;
 export const ItemWrap = styled.li`

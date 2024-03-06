@@ -22,8 +22,9 @@ export const Container = styled.div`
 // `;
 
 export const BtnHome = styled.button`
-  position: absolute;
+  position: fixed;
   top: 0px;
+  z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,9 +56,10 @@ export const WrapLeftMob = styled.div`
 export const WrapLeftDeck = styled.div`
   display: none;
   @media screen and (min-width: 767px) {
-    position: relative;
+    position: fixed;
     top: 0;
     left: 0;
+    z-index: 2;
     display: block;
     width: 15vw;
     background-color: #2196f3;
@@ -72,12 +74,13 @@ export const WrapRight = styled.div`
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 100%;
+  height: 100vh;
   /* overflow-y: scroll; */
   margin: 0;
   padding: 0;
   @media screen and (min-width: 767px) {
     width: 85vw;
+    padding-left: 15vw;
   }
 `;
 

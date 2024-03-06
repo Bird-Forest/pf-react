@@ -52,6 +52,7 @@ export default function MyForm() {
           setTimeout(() => {
             alert(JSON.stringify(values, null, 2));
             setSubmitting(true);
+            console.log(values);
             resetForm();
           }, 400);
         }}

@@ -7,6 +7,7 @@ import {
   FilterMobileWrap,
   FilterWrap,
   FriendsList,
+  WpapFilterPage,
 } from './Product.styled';
 import FilterArray from './FilterArray';
 import WindowWidth from 'components/WindowWidth';
@@ -94,7 +95,7 @@ export default function FriendList() {
   const Arr = Array.isArray(filterArray) && filterArray.length > 0;
 
   return (
-    <>
+    <WpapFilterPage>
       <FilterBar>
         {isLoading && <Loading />}
         <BtnFilter onClick={() => setIsHidden(!isHidden)}>Filters</BtnFilter>
@@ -134,6 +135,6 @@ export default function FriendList() {
             return <FriendItem key={nanoid()} item={item} />;
           })}
       </FriendsList>
-    </>
+    </WpapFilterPage>
   );
 }

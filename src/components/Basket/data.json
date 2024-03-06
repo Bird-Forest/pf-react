@@ -525,6 +525,16 @@
         "id": 4,
         "name": "Mayonnaisee",
         "img": "https://s7d1.scene7.com/is/image/mcdonalds/mayonnaisef"
+      },
+      {
+        "id": 5,
+        "name": "Mustard",
+        "img": "https://s7d1.scene7.com/is/image/mcdonalds/mustard"
+      },
+      {
+        "id": 6,
+        "name": "Onions",
+        "img": "https://s7d1.scene7.com/is/image/mcdonalds/reconstituted_onions"
       }
     ],
     "price": 8,
@@ -572,11 +582,6 @@
         "id": 6,
         "name": "Pickle Slices",
         "img": "https://s7d1.scene7.com/is/image/mcdonalds/pickles"
-      },
-      {
-        "id": 7,
-        "name": "Onions",
-        "img": "https://s7d1.scene7.com/is/image/mcdonalds/reconstituted_onions"
       }
     ],
     "price": 10.45,
@@ -624,11 +629,6 @@
         "id": 6,
         "name": "Onions",
         "img": "https://s7d1.scene7.com/is/image/mcdonalds/slivered_onions"
-      },
-      {
-        "id": 7,
-        "name": "Mustard",
-        "img": "https://s7d1.scene7.com/is/image/mcdonalds/mustard"
       }
     ],
     "price": 6,
