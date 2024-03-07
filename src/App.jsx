@@ -12,8 +12,8 @@ const ReaderPage = lazy(() => import('pages/ReaderPage'));
 const FilterPage = lazy(() => import('pages/FilterPage'));
 const BasketPage = lazy(() => import('pages/BasketPage'));
 const HomeBurger = lazy(() => import('components/Basket/HomeBurger'));
-const ShowcaseBurgers = lazy(() => import('components/Basket/ShowcaseBurgers'));
-const FavoritesList = lazy(() => import('components/Basket/FavoritesList'));
+const BurgerList = lazy(() => import('components/Basket/BurgerList'));
+const FavoriteList = lazy(() => import('components/Basket/FavoriteList'));
 const BasketList = lazy(() => import('./components/Basket/BasketList'));
 
 export default function App() {
@@ -32,8 +32,8 @@ export default function App() {
           <Route path="filter" element={<FilterPage />} />
           <Route path="basket" element={<BasketPage />}>
             <Route path="" element={<HomeBurger />} />
-            <Route path="burger" element={<ShowcaseBurgers />} />
-            <Route path="favorites" element={<FavoritesList />} />
+            <Route path="burger" element={<BurgerList />} />
+            <Route path="favorites" element={<FavoriteList />} />
             <Route path="order" element={<BasketList />} />
           </Route>
         </Route>

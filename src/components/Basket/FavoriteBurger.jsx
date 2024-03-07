@@ -20,7 +20,7 @@ import { nanoid } from '@reduxjs/toolkit';
 import { BsTrash3Fill, BsBasket3Fill } from 'react-icons/bs';
 import { BasketContext, FavoritesContext } from './ProductProvider';
 
-export default function BurgerCard({ item }) {
+export default function FavoriteBurger({ item }) {
   const { likes, setLikes } = useContext(FavoritesContext);
   const { goods, setGoods } = useContext(BasketContext);
 

@@ -8,8 +8,8 @@ export const FormikPageWrap = styled.div`
   width: 100%;
   height: 100vh;
   background-color: #fafafa;
-  /* margin: 40px 0; */
-  /* padding: 8vh 0 0 0; */
+  /* margin: 40px 0;
+  padding: 8vh 0 0 0; */
 `;
 export const WrapNavSign = styled.nav`
   top: 0;
@@ -50,11 +50,11 @@ export const WrapFormUp = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  /* width: 100%;
+  width: 100%;
   height: fit-content;
   background-color: #fafafa;
-  margin: 0;
-  padding: 24px 0 0 0; */
+  margin: 8px 0 0 0;
+  padding: 0;
   .form {
     display: flex;
     flex-direction: column;

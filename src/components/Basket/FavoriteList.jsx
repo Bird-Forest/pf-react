@@ -2,18 +2,22 @@ import React, { useContext } from 'react';
 import { FavoritesContext } from './ProductProvider';
 import { FavoritesWrap } from './Burger.styled';
 import { nanoid } from '@reduxjs/toolkit';
-import BurgerCard from './BurgerCard';
+import EmptyPage from './EmptyPage';
+import FavoriteBurger from './FavoriteBurger';
 
-export default function FavoritesList() {
+export default function FavoriteList() {
   const { likes } = useContext(FavoritesContext);
 
   const Arr = Array.isArray(likes) && likes.length > 0;
   return (
     <FavoritesWrap>
-      {Arr &&
+      {Arr ? (
         likes.map(item => {
-          return <BurgerCard key={nanoid()} item={item} />;
-        })}
+          return <FavoriteBurger key={nanoid()} item={item} />;
+        })
+      ) : (
+        <EmptyPage />
+      )}
     </FavoritesWrap>
   );
 }

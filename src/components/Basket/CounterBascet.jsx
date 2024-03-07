@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import {
   BurgPriceOrder,
   CountBasketWrap,
@@ -15,6 +15,12 @@ export default function CounterBasket({ item }) {
   const handleDecrement = () => {
     setCount(count - 1);
   };
+  const amount = useMemo(() => Number(item.price * count), [item, count]);
+
+  // let amount = Number(item.price * count);
+  console.log(amount);
+
+  // getTotal(amount);
 
   return (
     <CountBasketWrap>
@@ -33,7 +39,7 @@ export default function CounterBasket({ item }) {
       </div>
       <CounterOrder>{count}</CounterOrder>
       <BurgPriceOrder>{item.price.toFixed(2)}</BurgPriceOrder>
-      <InTotalItem>{(item.price.toFixed(2) * count).toFixed(2)}</InTotalItem>
+      <InTotalItem>{amount.toFixed(2)}</InTotalItem>
     </CountBasketWrap>
   );
 }

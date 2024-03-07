@@ -7,7 +7,7 @@ import data from './data.json';
 const burgers = data;
 // console.log(burgers);
 
-export default function ShowcaseBurgers() {
+export default function BurgerList() {
   const Arr = Array.isArray(burgers) && burgers.length > 0;
   return (
     <BurgersWrap>

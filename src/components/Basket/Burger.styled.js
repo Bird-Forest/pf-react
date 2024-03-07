@@ -150,7 +150,7 @@ export const CaseBurger = styled.div`
   align-items: center;
   width: 100%;
   height: 100%;
-  background-color: #ffac33;
+  background-color: #ffd180;
   padding: 0;
   margin: 0;
 `;
@@ -259,14 +259,7 @@ export const BurgVeg = styled.h3`
   margin: 0;
 `;
 // ***********   FavoritesList **************************************
-// export const CaseFavor = styled.div`
-//   display: flex;
-//   width: 100%;
-//   height: 100vmax;
-//   background-color: #ffd180;
-//   padding: 0;
-//   margin: 0;
-// `;
+
 export const FavoritesWrap = styled.ul`
   display: flex;
   flex-wrap: wrap;
@@ -481,7 +474,7 @@ export const GoodsWrap = styled.ul`
   align-items: center;
   gap: 8px;
   width: 100%;
-  height: fit-content;
+  height: 100%;
   background-color: #ffd180;
   padding: 8px;
   margin: 36px 0 0 0;
@@ -636,4 +629,26 @@ export const CostOfGoods = styled.div`
   padding: 0 16px;
   margin: 0;
 `;
+// *************** Empty Page *************
+export const WrapEmpty = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* width: 100%;
+  height: 100%;
+  background-color: #ffd180; */
+  gap: 20px;
+  margin: 20px 0;
+  .title {
+    font-size: clamp(12px, 0.568rem + 0.91vw, 20px);
+    font-weight: 700;
+  }
+  .icon-empty {
+    width: 240px;
+    height: 240px;
+    fill: white;
+  }
+`;
+
 // "https://s7d1.scene7.com/is/image/mcdonalds/t-mcdonalds-McChicken-1:1-4-product-tile-desktop"
